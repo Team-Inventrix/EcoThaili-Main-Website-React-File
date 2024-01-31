@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { navigation_items,navigation_logos } from './data/navigation_data';
+import useResponsiveView from './useResponsiveView'
 
 const NavigationBar = ({active_item}) => {
 
@@ -21,6 +22,7 @@ const NavigationBar = ({active_item}) => {
       </div>
       <div className='nav-right'>
         <ul>
+        {useResponsiveView() == "mobile" && <ion-icon name="menu-outline" style={{fontSize:"20pt",cursor:"pointer"}}></ion-icon>}
           {show_nav_list}
         </ul>
       </div>

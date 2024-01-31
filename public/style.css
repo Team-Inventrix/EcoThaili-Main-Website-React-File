@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -20,10 +21,12 @@ body {
 /* Navigation Bar */
 
 nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  border: 2px solid red;
   align-items: center;
+  padding: 8px 20px;
+  border-bottom: .5px solid var(--primary-green-color-dark);
 }
 
 a {
@@ -33,18 +36,21 @@ a {
 nav li {
   list-style: none;
   color: var(--primary-green-color-dark);
+  display: none;
 }
-nav .nav-left img {
-  display: block;
+nav .nav-left {
+  display: flex;
+  flex-direction: column;
+  gap: .3em;
 }
+
 nav img {
-  height: auto;
-  width: 6em;
+  height: 20px;
+  width: auto;
 }
 
 nav .nav-right ul{
   display: flex;
-  gap: 31px;
 }
 
 .nav-right ul a {
@@ -75,4 +81,27 @@ ul li.active:hover {
 .nav-right ul li:hover,
 .nav-right ul li.active {
   color: #460505;
+}
+
+@media (min-width:767px) {
+  nav {
+    padding: 13px 45px;
+  }
+
+  nav .nav-left {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  nav img {
+    height: 39px;
+    width: auto;
+  }
+  nav .nav-right ul{
+    display: flex;
+    gap: 31px;
+  }
+  nav li {
+    display: flex;
+  }
 }
