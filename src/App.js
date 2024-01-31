@@ -1,9 +1,10 @@
 import logo from './logo.svg';
-import ComingSoon from './component/CommingSoon';
+// import ComingSoon from './component/NavigationBar';
+import NavigationBar from './component/NavigationBar';
 
 function App() {
   return (
-    <ComingSoon />
+    <NavigationBar />
   );
 }
 
