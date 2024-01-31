@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-// import ComingSoon from './component/NavigationBar';
+import { BrowserRouter as Router } from 'react-router-dom';
 import NavigationBar from './component/NavigationBar';
 
 function App() {
   return (
-    <NavigationBar />
+    <Router>
+      <NavigationBar active_item='Our Story' />
+    </Router>
+    
   );
 }
 

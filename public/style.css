@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +14,65 @@
 
 body {
   background: var(--primary-green-background-light);
+  font-family: "Inter", sans-serif;
 }
 
-nav div:first-child img {
+/* Navigation Bar */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav li {
+  list-style: none;
+  color: var(--primary-green-color-dark);
+}
+nav .nav-left img {
   display: block;
 }
 nav img {
   height: auto;
   width: 6em;
+}
+
+nav .nav-right ul{
+  display: flex;
+  gap: 31px;
+}
+
+.nav-right ul a {
+  position: relative;
+}
+
+.nav-right ul li {
+  font-weight: 700;
+  transition: 250ms ease-in-out;
+}
+
+ul li.active::after {
+  position: absolute;
+  bottom: -.3em;
+  left: 0;
+  content: '';
+  background: var(--primary-green-background-dark);
+  width: 100%;
+  height: .1em;
+  transition: all 250ms ease-in-out;
+}
+
+
+ul li.active:hover {
+  width: 100%;
+}
+
+.nav-right ul li:hover,
+.nav-right ul li.active {
+  color: #460505;
 }

@@ -1,13 +1,29 @@
-import React, {useState,useEffect} from 'react';
-import ecoThaili from './image/logo/ecoThaili-color-logo.png'
-import fourByfourSdg from './image/logo/linearSDG.PNG'
+import { Link } from 'react-router-dom';
+import { navigation_items,navigation_logos } from './data/navigation_data';
 
+const NavigationBar = ({active_item}) => {
 
+  const show_nav_logos = Object.entries(navigation_logos).map(([key, value], index) => (
+    <img src={value.src} alt={value.alt} key={index}/>
+  ))
+  const show_nav_list = Object.entries(navigation_items).map(([item, path], index) => (
+    <Link to={path} key={index}>
+      <li className={`${active_item === item ? 'active':''}`}>
+        {item}
+      </li>
+    </Link>
+  ))
 
-const NavigationBar = () => {
   return (
     <nav>
-      This is nav bar.
+      <div className='nav-left'>
+        {show_nav_logos}
+      </div>
+      <div className='nav-right'>
+        <ul>
+          {show_nav_list}
+        </ul>
+      </div>
     </nav>
   );
 };
