@@ -14,7 +14,8 @@ module.exports = {
     env: {
       browser: true,
       node: true,
-      es6: true
+      es6: true,
+      es2020: true
     },
     settings: {
       react: {
@@ -22,7 +23,8 @@ module.exports = {
       }
     },
     rules: {
-        'react/prop-types': 0,
+      'react/prop-types': 0,
       'react/react-in-jsx-scope': 'off'
     }
   };
+  
