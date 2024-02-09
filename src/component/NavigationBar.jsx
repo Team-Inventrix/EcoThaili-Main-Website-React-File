@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { navigation_items,navigation_logos } from './data/navigation_data';
-import useResponsiveView from './useResponsiveView'
+import useResponsiveView from './useResponsiveView';
 
 const NavigationBar = ({active_item}) => {
 
