@@ -21,7 +21,7 @@ const useResponsiveView = () => {
     window.addEventListener('resize', updateViewSize);
 
     return () => {
-      window.removeEventListener('resize', updateViewSize);
+      globalThis.removeEventListener('resize', updateViewSize);
     };
   }, []);
 
