@@ -13,7 +13,7 @@
 #IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 #WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
   - name: Feature Request
     about: Do you have a feature request that you think would really improve our project? We look forward to hearing from you!
