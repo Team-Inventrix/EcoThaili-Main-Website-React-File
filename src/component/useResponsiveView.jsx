@@ -4,7 +4,7 @@ const useResponsiveView = () => {
   const [viewSize, setViewSize] = useState('desktop');
 
   const updateViewSize = () => {
-    const width = window.innerWidth;
+    const width = globalThis.innerWidth;
 
     if (width <= 767) {
       setViewSize('mobile');
@@ -18,10 +18,10 @@ const useResponsiveView = () => {
   useEffect(() => {
     updateViewSize();
 
-    window.addEventListener('resize', updateViewSize);
+    globalThis.addEventListener('resize', updateViewSize);
 
     return () => {
-      window.removeEventListener('resize', updateViewSize);
+      globalThis.removeEventListener('resize', updateViewSize);
     };
   }, []);
 
