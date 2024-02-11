@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 * {
   margin: 0;
@@ -7,10 +7,10 @@
 }
 
 :root {
-  --primary-green-background-light: #CCE4CB;
-  --primary-green-background-dark: #1A3306;
-  --primary-green-color-dark: #103D12;
-  --primary-white: #EAEAEA;
+  --primary-green-background-light: #fff;
+  --primary-green-background-dark: #1a3306;
+  --primary-green-color-dark: #103d12;
+  --primary-white: #eaeaea;
 }
 
 body {
@@ -26,7 +26,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
-  border-bottom: .5px solid var(--primary-green-color-dark);
+  border-bottom: 0.5px solid var(--primary-green-color-dark);
 }
 
 a {
@@ -41,7 +41,7 @@ nav li {
 nav .nav-left {
   display: flex;
   flex-direction: column;
-  gap: .3em;
+  gap: 0.3em;
 }
 
 nav img {
@@ -49,7 +49,7 @@ nav img {
   width: auto;
 }
 
-nav .nav-right ul{
+nav .nav-right ul {
   display: flex;
 }
 
@@ -64,15 +64,14 @@ nav .nav-right ul{
 
 ul li.active::after {
   position: absolute;
-  bottom: -.3em;
+  bottom: -0.3em;
   left: 0;
-  content: '';
+  content: "";
   background: var(--primary-green-background-dark);
   width: 100%;
-  height: .1em;
+  height: 0.1em;
   transition: all 250ms ease-in-out;
 }
-
 
 ul li.active:hover {
   width: 100%;
@@ -83,7 +82,7 @@ ul li.active:hover {
   color: #460505;
 }
 
-@media (min-width:767px) {
+@media (min-width: 767px) {
   nav {
     padding: 13px 45px;
   }
@@ -97,7 +96,7 @@ ul li.active:hover {
     height: 39px;
     width: auto;
   }
-  nav .nav-right ul{
+  nav .nav-right ul {
     display: flex;
     gap: 31px;
   }
