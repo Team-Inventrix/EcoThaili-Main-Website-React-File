@@ -22,7 +22,7 @@ Make sure you have the following installed on your machine:
              ```
           This means you have install git successfully else you have to uninstall the git and again re-install (Pro Tip only for windows user: If you have installed the git and you are not getting the version then add the git path to the environment variable. Here git path means the location to you computer where you have installed your git. After you get the path follow with this video to set environment variable https://www.youtube.com/watch?v=ow2jROvxyH4 )
 
-      - Second Download &  Install Node.js from https://nodejs.org/en/download (This will automatically install npm to your local machine)
+      - Second Download &  Install Node.js from [nodejs](https://nodejs.org/en/download) (This will automatically install npm to your local machine)
       - Again we need to check if npm and node js is installed correctly or not. So to do that run the following command in you terminal:
         ```
         npm -v
