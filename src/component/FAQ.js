@@ -11,7 +11,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",
-  height: "100%",
+  minheight: "100vh",
   width: "100%",
   background: "#2B2B60",
   display: "flex",
@@ -19,8 +19,7 @@ const StyledContainer = styled(Container)({
   alignItems: "center",
   // zIndex:"-1",
   "@media (min-width:600px)": {
-    padding: "15rem",
-    height: "120vh",
+    padding: "10rem",
     textAlign: "center",
   },
 });
@@ -30,7 +29,7 @@ const Title = styled(Typography)({
   textAlign: "center",
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
-  margin: "3rem 0",
+  margin: "0 0 3rem 0",
 });
 
 const StyleAccordion = styled(Accordion)({

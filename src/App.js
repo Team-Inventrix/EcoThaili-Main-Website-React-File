@@ -9,10 +9,13 @@ import MaterialComposition from "./component/MaterialComposition";
 import OurImpact from "./component/OurImpact";
 import About from "./component/About";
 import Product from "./component/Product";
+import MainSlider from "./component/MainSlider";
+
 
 function App() {
   return (
     <Router>
+      <MainSlider />
       <Header active_item="Our Story" />
       <OurStory active_item="Our Story" />
       <ProblemWeAreSolving active_item="Our Story" />

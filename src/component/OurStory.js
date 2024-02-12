@@ -32,7 +32,7 @@ const Body = styled(Typography)({
   color: "#2B2B60",
   textAlign: "justify",
   fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
-  lineHeight: "1.5",
+  lineHeight: "1.7",
   '@media (min-width:600px)': {
     textAlign: "center"
   }
@@ -47,13 +47,11 @@ export default function OurStory() {
             The EcoThaili Story
           </Title>
           <Body variant="body1">
-            BioThaili, our eco-friendly plastic, is a story of change. Made
-            from banana fibers, it's more than just a bag – it's a promise to
-            be kind to our planet. Every use is a small step towards a
-            cleaner, greener future. Join us in this journey, where simple
-            choices make a big impact. BioThaili is not just plastic; it's a
-            way to care for our Earth. Together, let's make a difference.
-            <br /> 🌿 #BioThaili #EcoFriendly #Sustainability"
+          Our mission is to protect our only planet, by creating eco-friendly plastic from banana crop waste.
+It's not just a bag; it's a promise to nurture our planet.
+ Every use is a step towards a cleaner, greener future. Together, let's make a difference.
+ 
+            <br /> 🌿<b>#EcoThaili #BeatPlasticWithUs</b> 
           </Body>
         </Grid>
       </Grid>

@@ -61,7 +61,7 @@ function Header() {
               alignItems: "center",
               justifyContent: "space-between",
               flexShrink: 0,
-              borderRadius: "999px",
+              borderRadius: ".5rem",
               bgcolor:
                 theme.palette.mode === "light"
                   ? "rgba(255, 255, 255, 0.4)"
@@ -94,7 +94,7 @@ function Header() {
                   onClick={() => scrollToSection("os")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
                     Our Story
                   </Typography>
                 </MenuItem>
@@ -102,7 +102,7 @@ function Header() {
                   onClick={() => scrollToSection("pwas")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
                     Problem We are Solving
                   </Typography>
                 </MenuItem>
@@ -110,7 +110,7 @@ function Header() {
                   onClick={() => scrollToSection("mc")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
                     Material Composition
                   </Typography>
                 </MenuItem>
@@ -118,7 +118,7 @@ function Header() {
                   onClick={() => scrollToSection("oi")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
                     Our Impact
                   </Typography>
                 </MenuItem>
@@ -126,7 +126,7 @@ function Header() {
                   onClick={() => scrollToSection("p")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
                     Product
                   </Typography>
                 </MenuItem>
@@ -134,7 +134,7 @@ function Header() {
                   onClick={() => scrollToSection("faq")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
                     FAQ
                   </Typography>
                 </MenuItem>
@@ -142,7 +142,7 @@ function Header() {
                   onClick={() => scrollToSection("a")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="text.primary">
+                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
                     About
                   </Typography>
                 </MenuItem>

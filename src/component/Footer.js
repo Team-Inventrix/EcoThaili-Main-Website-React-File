@@ -30,7 +30,7 @@ const StyledContainer = styled(Container)({
   width: "100%",
   "@media (min-width:600px)": {
     gap: "0.5rem",
-    padding: "5rem",
+    padding: "5rem 5rem .7rem 5rem",
     textAlign: "left",
   },
 });
@@ -135,7 +135,7 @@ export default function Footer() {
               <Button
                 variant="contained"
                 color="primary"
-                sx={{ flexShrink: 0 }}
+                sx={{ flexShrink: 0, bgcolor:"#2B2B60" }}
               >
                 Subscribe
               </Button>
@@ -216,9 +216,9 @@ export default function Footer() {
           <FooterLink color="text.secondary" href="#">
             Terms of Service
           </FooterLink>
-          <Copyright />
         </div>
 
+        <Copyright />
         {/* <ScrollLink to="os" smooth={true} duration={2000}>
           <Typography variant="body2" sx={footerLinkStyle}>
             Back to Top
