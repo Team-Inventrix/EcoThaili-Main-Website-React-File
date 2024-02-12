@@ -9,8 +9,12 @@
 name: Deno-linting
 
 on:
-  push: {}
-  pull_request: {}
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -30,7 +34,7 @@ jobs:
           deno-version: v1.x
 
       - name: Run linter
-        run: deno lint --unstable --rules='{ "quotes": ["error", "single"], "no-trailing-whitespace": "off" }'
+        run: deno lint
 
       - name: Run tests
         run: deno test -A
@@ -49,7 +53,7 @@ jobs:
           deno-version: v1.x
 
       - name: Run linter
-        run: deno lint --unstable --rules='{ "quotes": ["error", "single"], "no-trailing-whitespace": "off" }'
+        run: deno lint
 
       - name: Run tests
         run: deno test -A
@@ -68,7 +72,7 @@ jobs:
           deno-version: v1.x
 
       - name: Run linter
-        run: deno lint --unstable --rules='{ "quotes": ["error", "single"], "no-trailing-whitespace": "off" }'
+        run: deno lint
 
       - name: Run tests
         run: deno test -A
