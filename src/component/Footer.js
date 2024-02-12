@@ -12,74 +12,112 @@ import GitHubicon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import { Link as ScrollLink } from "react-scroll";
+import { styled } from "@mui/system";
 
 const logoStyle = {
   width: "140px",
   height: "auto",
 };
 
+const StyledContainer = styled(Container)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  gap: "1rem",
+  padding: "1rem 1rem .3rem 1rem ",
+  textAlign: "center",
+  boxSizing: "border-box",
+  width: "100%",
+  "@media (min-width:600px)": {
+    gap: "0.5rem",
+    padding: "5rem",
+    textAlign: "left",
+  },
+});
+
+const UpperFooter = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
+  justifyContent: "space-between",
+  "@media (min-width:600px)": {
+    flexDirection: "row",
+  },
+});
+
+const LogoSide = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  gap: 4,
+  minWidth: "100%",
+  "@media (min-width:600px)": {
+    minWidth: "60%"
+  },
+});
+
+const LowerFooter = styled(Box)({
+  display: "flex",
+  justifyContent: "space-between",
+  paddingTop: "1rem",
+  marginTop: "1rem",
+  width: "100%",
+  borderTop: "1px solid #2B2B60",
+});
+
+const FooterTitle = styled(Typography)({
+  fontSize: "clamp(1rem, 2vw, 1.5rem)",
+  fontWeight: "600",
+  marginBottom: ".5rem",
+  color:"#2B2B60",
+})
+
+const FooterBody = styled(Typography)({
+  fontSize: "clamp(.7rem, 2vw, 1rem)",
+  fontWeight: "400",
+  marginBottom: ".5rem",
+  color:"#2B2B60",
+  opacity: ".7",
+})
+
+const FooterLink = styled(Link)({
+  fontSize: "clamp(.7rem, 2vw, 1rem)",
+  fontWeight: "400",
+  marginBottom: ".5rem",
+  color:"#2B2B60",
+  opacity: ".7",
+  textDecoration: "none",
+  '&:hover': {
+    opacity: "1"
+  }
+})
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
+      <FooterBody>
       {"Copyright © "}
-      <Link href="/">EcoThaili&nbsp;</Link>
+      <FooterLink href="/">EcoThaili&nbsp;</FooterLink>
       {new Date().getFullYear()}
+      </FooterBody>
     </Typography>
   );
 }
 
-const footerLinkStyle = {
-  color: "text.secondary",
-  textDecoration: "none",
-  cursor: "pointer",
-  "&:hover": {
-    textDecoration: "underline",
-  },
-};
-
 export default function Footer() {
   return (
-    <Container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: { xs: 4, sm: 8 },
-        py: { xs: 8, sm: 10 },
-        px: { xs: 8, sm: 10 },
-        textAlign: { sm: "center", md: "left" },
-        boxShadow: "border-box",
-        width: "100%",
-      }}
-      maxWidth={false}
-    >
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
-          width: "100%",
-          justifyContent: "space-between",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 4,
-            minWidth: { xs: "100%", sm: "60%" },
-          }}
-        >
+    <StyledContainer maxWidth={false}>
+      <UpperFooter>
+        <LogoSide>
           <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
-            <Box sx={{ ml: "-15px" }}>
+            <Box>
               <img src={Ecothaili} style={logoStyle} alt="Ecothaili" />
             </Box>
-            <Typography variant="body2" fontWeight={600} gutterBottom>
+            <FooterTitle variant="body2">
               Newsletter
-            </Typography>
-            <Typography variant="body2" color="text.secondary" mb={2}>
+            </FooterTitle>
+            <FooterBody>
               Subscribe to our newsletter for weekly updates and promotions.
-            </Typography>
+            </FooterBody>
             <Stack direction="row" spacing={1} useFlexGap>
               <TextField
                 id="outlined-basic"
@@ -103,7 +141,7 @@ export default function Footer() {
               </Button>
             </Stack>
           </Box>
-        </Box>
+        </LogoSide>
         <Box
           sx={{
             display: { xs: "none", sm: "flex" },
@@ -111,25 +149,25 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" fontWeight={600}>
+          <FooterTitle>
             EcoThaili
-          </Typography>
-          <Link color="text.secondary" href="#os">
+          </FooterTitle>
+          <FooterLink href="#os">
             Our Story
-          </Link>
-          <Link color="text.secondary" href="#pwas">
+          </FooterLink>
+          <FooterLink href="#pwas">
             Problem We are Solving
-          </Link>
-          <Link color="text.secondary" href="#mc">
+          </FooterLink>
+          <FooterLink href="#mc">
             Material Composition
-          </Link>
-          <Link color="text.secondary" href="#oi">
+          </FooterLink>
+          <FooterLink href="#oi">
             Our Impact
-          </Link>
+          </FooterLink>
 
-          <Link color="text.secondary" href="#faq">
+          <FooterLink href="#faq">
             FAQs
-          </Link>
+          </FooterLink>
         </Box>
         <Box
           sx={{
@@ -138,15 +176,13 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" fontWeight={600}>
+          <FooterTitle variant="body2" fontWeight={600}>
             Company
-          </Typography>
-          <Link color="text.secondary" href="#a">
+          </FooterTitle>
+          <FooterLink color="text.secondary" href="#a">
             About us
-          </Link>
-          <Link color="text.secondary" >
-            Careers (no page yet)
-          </Link>
+          </FooterLink>
+          <FooterLink color="text.secondary">Careers (no page yet)</FooterLink>
         </Box>
         <Box
           sx={{
@@ -155,40 +191,31 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <Typography variant="body2" fontWeight={600}>
+          <FooterTitle>
             Legal
-          </Typography>
-          <Link color="text.secondary" href="#">
+          </FooterTitle>
+          <FooterLink color="text.secondary" href="#">
             Terms
-          </Link>
-          <Link color="text.secondary" href="#">
+          </FooterLink>
+          <FooterLink color="text.secondary" href="#">
             Privacy
-          </Link>
-          <Link color="text.secondary" href="#">
+          </FooterLink>
+          <FooterLink color="text.secondary" href="#">
             Contact
-          </Link>
+          </FooterLink>
         </Box>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          pt: { xs: 4, sm: 8 },
-          width: "100%",
-          borderTop: "1px solid",
-          borderColor: "divider",
-        }}
-      >
+      </UpperFooter>
+      <LowerFooter>
         <div>
-          <Link color="text.secondary" href="#">
+          <FooterLink color="text.secondary" href="#">
             Privacy Policy
-          </Link>
+          </FooterLink>
           <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
             &nbsp;•&nbsp;
           </Typography>
-          <Link color="text.secondary" href="#">
+          <FooterLink color="text.secondary" href="#">
             Terms of Service
-          </Link>
+          </FooterLink>
           <Copyright />
         </div>
 
@@ -247,7 +274,7 @@ export default function Footer() {
             <FacebookIcon />
           </IconButton>
         </Stack>
-      </Box>
-    </Container>
+      </LowerFooter>
+    </StyledContainer>
   );
 }

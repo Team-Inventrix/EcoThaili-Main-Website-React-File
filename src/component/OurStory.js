@@ -5,8 +5,8 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 
 const StyledContainer = styled(Container)({
-  padding: "1.5rem",
-  height: "100vh",
+  padding: "5rem 1.5rem",
+  height: "100%",
   width: "100%",
   background: "#EFEEEF",
   display: "flex",

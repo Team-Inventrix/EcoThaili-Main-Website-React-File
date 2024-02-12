@@ -9,8 +9,8 @@ import BioThaili from "../image/products/bio-plastic.webp";
 import OrderIcon from "@mui/icons-material/ShoppingCart";
 
 const StyledContainer = styled(Container)({
-  padding: "1.5rem",
-  height: "100vh",
+  padding: "5rem 1.5rem",
+  height: "100%",
   width: "100%",
   background: "#EFEEEF",
   display: "flex",
