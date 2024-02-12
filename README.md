@@ -126,9 +126,10 @@ Make sure you have the following installed on your machine:
       In place of "Ningsang Jabegu" add your username of the github which should be enclosed in double quot (or can be in single quote)
 
       ```
-      git config --global user.email "ningsanglimbu5203@gmail.com"
+      git config --global user.email "<email address>"
       ```
-      In place of "ningsanglimbu5203@gmail.com" add your email address here which should be enclosed in quotes. <br><br>(Pro Tips: instead of using your personal email address, you can also use the email address that is generated to you by the GitHub. You can find this in https://github.com/settings/emails and look at them 'Emails' there you will see your email id followed with '- Primary'. And just move your eye down there you will see 'Not visible in emails' bullet point you can get something like 86409265+Ningsang-Jabegu@users.noreply.github.com , you can also use this if you don't want to add your email id directly )
+      
+add your email address here which should be enclosed in quotes. <br><br>(Pro Tips: instead of using your personal email address, you can also use the email address that is generated to you by the GitHub. You can find this in https://github.com/settings/emails and look at them 'Emails' there you will see your email id followed with '- Primary'. And just move your eye down there you will see 'Not visible in emails' bullet point you can get something like 86409265+Ningsang-Jabegu@users.noreply.github.com , you can also use this if you don't want to add your email id directly )
 
     - While doing this steps you will be asked to authorize the git from your browser, do so and follow the prompt as instructed in the terminal for this.
 
