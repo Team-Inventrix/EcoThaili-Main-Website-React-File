@@ -11,7 +11,7 @@ Make sure you have the following installed on your machine:
 ## Steps
 0. **Pre Cloning Steps** (For new to GitHub)
    - If you are new to GitHub then, you probably don't know about GitHub, so follow these steps:
-      - First Download & Install git from https://git-scm.com/downloads
+      - First Download & Install git from [git](https://git-scm.com/downloads)
       - Now to know if you hav install git correctly or not you can check this by running following command in you terminal (Command Prompt):
          ```
           git -v
