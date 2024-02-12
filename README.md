@@ -123,7 +123,6 @@ Make sure you have the following installed on your machine:
       ```
       git config --global user.name "<user-name>"
       ```
-      In place of "Ningsang Jabegu" add your username of the github which should be enclosed in double quot (or can be in single quote)
 
       ```
       git config --global user.email "<email address>"
