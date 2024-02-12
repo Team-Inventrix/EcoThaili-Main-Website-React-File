@@ -117,7 +117,7 @@ Make sure you have the following installed on your machine:
 10. **Initial commit to the GitHub** (Begineer's Step) :
     - If you are trying to push your change for the first time then run the command:
       ```
-      git remote add origin dev https://github.com/Team-Inventrix/Team-Inventrix-Main-Website-React-File.git
+      git remote add origin https://github.com/Team-Inventrix/Team-Inventrix-Main-Website-React-File.git
       ```
     - Since this is your first time push to this repository you need to setup your username and email, so to do that follow 
       ```
@@ -133,10 +133,10 @@ add your email address here which should be enclosed in quotes. <br><br>(Pro Tip
     - Now you are finally ready to push you code to the GitHub. Remember these steps if you done once, you are now set and do not need to do anything stated in the step 10. You can directly jump from step 9 to step 11 for next time
 
 11. **Commit your change to the GitHub** :
-    - Since for front end web development, we are using dev branch so to create a new branch run the command :
+    - Since for development, we are using dev branch so to create a new branch run the command :
       ```
-      git branch dev
-      git checkout dev
+      git branch -m main
+      git checkout -b dev
       git status
       ```
       now you will see "On branch dev" "Your branch is up to date with 'origin/dev'"
@@ -144,8 +144,9 @@ add your email address here which should be enclosed in quotes. <br><br>(Pro Tip
     - And after successfully making a branch run the following command :
       ```
       git add .
-      git commit -m "feat: I have successfully committed my first change to this reposiitory."
+      git commit -m "<nature_of_commit>: I have successfully committed my first change to this reposiitory."
       ```
+      [Conventional commit guide](https://www.conventionalcommits.org/en/v1.0.0/)
       Here you need to remember that we will be following the commit convention so the text withing quotation is the comment that you will be uploading with your work. And the better way of writing convention is in the format
 
       ```
@@ -167,15 +168,18 @@ add your email address here which should be enclosed in quotes. <br><br>(Pro Tip
        (Use this if your are regular contributor)
 
        ```
-       git push
+       git push origin <name_of_current_working_branch>
        ```
       After you do this you need to see something like this <br>
       <br>
      ![Terminal in windows ](https://www.c-sharpcorner.com/article/learn-git-clone-commit-sync-and-push-changes-using-visual-studio-code/Images/36.png)
      <br>
-     If you got an error then search that error on what the error is saying and go discuss with other developer.
+     If you got an error then search that error on what the error is saying and go discuss with other developer in [Discussion](https://github.com/orgs/Team-Inventrix/discussions/categories/q-a)
 
-     - (Pull request banau bhanera)
+### Boom Ya 🚀, Its time to raise PR
+
+> [!IMPORTANT]
+> PR must be from branch where you have pushed your changes, to the base branch of our repository ie, main branch.
 
 ## Additional Notes
 - Make sure to consult the project's documentation or README for any specific instructions or requirements.
