@@ -48,9 +48,12 @@ function Header() {
           bgcolor: "transparent",
           backgroundImage: "none",
           mt: 2,
+          width: "100%",
         }}
       >
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" sx={{
+          // zIndex: '5'
+        }}>
           <Toolbar
             variant="regular"
             sx={(theme) => ({

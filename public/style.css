@@ -13,6 +13,10 @@
   --primary-white: #eaeaea;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--primary-green-background-light);
   font-family: "Inter", sans-serif;
