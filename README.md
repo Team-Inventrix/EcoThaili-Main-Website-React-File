@@ -121,7 +121,7 @@ Make sure you have the following installed on your machine:
       ```
     - Since this is your first time push to this repository you need to setup your username and email, so to do that follow 
       ```
-      git config --global user.name "Ningsang Jabegu"
+      git config --global user.name "<user-name>"
       ```
       In place of "Ningsang Jabegu" add your username of the github which should be enclosed in double quot (or can be in single quote)
 
