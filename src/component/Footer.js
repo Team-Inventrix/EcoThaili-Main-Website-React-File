@@ -10,6 +10,9 @@ import Typography from "@mui/material/Typography";
 import Ecothaili from "../image/logo/ecoThaili-color-logo-box.png";
 import GitHubicon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import { Link as ScrollLink } from "react-scroll";
 
 const logoStyle = {
   width: "140px",
@@ -26,6 +29,15 @@ function Copyright() {
   );
 }
 
+const footerLinkStyle = {
+  color: "text.secondary",
+  textDecoration: "none",
+  cursor: "pointer",
+  "&:hover": {
+    textDecoration: "underline",
+  },
+};
+
 export default function Footer() {
   return (
     <Container
@@ -35,8 +47,12 @@ export default function Footer() {
         alignItems: "center",
         gap: { xs: 4, sm: 8 },
         py: { xs: 8, sm: 10 },
+        px: { xs: 8, sm: 10 },
         textAlign: { sm: "center", md: "left" },
+        boxShadow: "border-box",
+        width: "100%",
       }}
+      maxWidth={false}
     >
       <Box
         sx={{
@@ -98,20 +114,20 @@ export default function Footer() {
           <Typography variant="body2" fontWeight={600}>
             EcoThaili
           </Typography>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="#os">
             Our Story
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="#pwas">
             Problem We are Solving
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="#mc">
             Material Composition
           </Link>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="#oi">
             Our Impact
           </Link>
 
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="#faq">
             FAQs
           </Link>
         </Box>
@@ -125,11 +141,11 @@ export default function Footer() {
           <Typography variant="body2" fontWeight={600}>
             Company
           </Typography>
-          <Link color="text.secondary" href="#">
+          <Link color="text.secondary" href="#a">
             About us
           </Link>
-          <Link color="text.secondary" href="#">
-            Careers
+          <Link color="text.secondary" >
+            Careers (no page yet)
           </Link>
         </Box>
         <Box
@@ -175,6 +191,13 @@ export default function Footer() {
           </Link>
           <Copyright />
         </div>
+
+        {/* <ScrollLink to="os" smooth={true} duration={2000}>
+          <Typography variant="body2" sx={footerLinkStyle}>
+            Back to Top
+          </Typography>
+        </ScrollLink> */}
+
         <Stack
           direction="row"
           justifyContent="left"
@@ -186,7 +209,8 @@ export default function Footer() {
         >
           <IconButton
             color="inherit"
-            href="https://github.com"
+            target="_blank"
+            href="https://github.com/Team-Inventrix"
             aria-label="GitHub"
             sx={{ alignSelf: "center" }}
           >
@@ -195,11 +219,32 @@ export default function Footer() {
 
           <IconButton
             color="inherit"
-            href="https://www.linkedin.com"
+            target="_blank"
+            href="https://www.linkedin.com/in/team-inventrix-9a35712b0/"
             aria-label="LinkedIn"
             sx={{ alignSelf: "center" }}
           >
             <LinkedInIcon />
+          </IconButton>
+
+          <IconButton
+            color="inherit"
+            target="_blank"
+            href="https://www.youtube.com/@team-inventrix"
+            aria-label="YouTube"
+            sx={{ alignSelf: "center" }}
+          >
+            <YouTubeIcon />
+          </IconButton>
+
+          <IconButton
+            color="inherit"
+            target="_blank"
+            href="https://www.facebook.com/profile.php?id=61555879292763"
+            aria-label="Facebook"
+            sx={{ alignSelf: "center" }}
+          >
+            <FacebookIcon />
           </IconButton>
         </Stack>
       </Box>
