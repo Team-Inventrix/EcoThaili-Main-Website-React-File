@@ -10,8 +10,8 @@ import { styled } from "@mui/system";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const StyledContainer = styled(Container)({
-  padding: "1.5rem",
-  height: "120vh",
+  padding: "5rem 1.5rem",
+  height: "100%",
   width: "100%",
   background: "#2B2B60",
   display: "flex",

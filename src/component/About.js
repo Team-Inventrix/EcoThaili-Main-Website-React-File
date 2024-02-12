@@ -7,15 +7,16 @@ import ourTeam from "../image/OurTeam.png";
 
 const StyledContainer = styled(Container)({
   padding: "0",
-  height: "100vh",
-  width: "100%",
+  height: "auto",
+  width: "100vw",
   background: "#EFEEEF",
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-end",
   '@media (min-width:600px)': {
     padding: "0",
-    height: "100vh",
+    height: "auto",
+    width:"100%",
     textAlign: "center"
   },
 });
@@ -25,7 +26,10 @@ const Title = styled(Typography)({
   textAlign: "center",
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)",
-  margin: "3rem 0",
+  margin: "1rem 0",
+  '@media (min-width:600px)': {
+    margin: "3rem 0",
+  },
 });
 
 const Body = styled(Typography)({
