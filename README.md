@@ -124,7 +124,6 @@ Make sure you have the following installed on your machine:
       git config --global user.name "<user-name>"
       
 
-      ```
       git config --global user.email "<email address>"
       ```
       
