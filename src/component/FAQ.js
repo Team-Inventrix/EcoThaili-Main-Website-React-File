@@ -33,6 +33,10 @@ const Title = styled(Typography)({
   margin: "3rem 0",
 });
 
+const StyleAccordion = styled(Accordion)({
+  background:"#f2f2f7e0"
+});
+
 const Body = styled(Typography)({
   color: "#EFEEEF",
   textAlign: "left",
@@ -42,6 +46,8 @@ const Body = styled(Typography)({
     textAlign: "left",
   },
 });
+
+
 
 const Question = styled(Typography)({
   color: "#2B2B60",
@@ -82,7 +88,7 @@ export default function FAQ() {
             Frequently asked questions
           </Title>
           <Body>
-            <Accordion
+            <StyleAccordion
               expanded={expanded === "panel1"}
               onChange={handleChange("panel1")}
             >
@@ -103,8 +109,8 @@ export default function FAQ() {
                   transformed into durable and eco-friendly bags.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
-            <Accordion
+            </StyleAccordion>
+            <StyleAccordion
               expanded={expanded === "panel2"}
               onChange={handleChange("panel2")}
             >
@@ -126,8 +132,8 @@ export default function FAQ() {
                   bags.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
-            <Accordion
+            </StyleAccordion>
+            <StyleAccordion
               expanded={expanded === "panel3"}
               onChange={handleChange("panel3")}
             >
@@ -148,8 +154,8 @@ export default function FAQ() {
                   both strength and reliability.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
-            <Accordion
+            </StyleAccordion>
+            <StyleAccordion
               expanded={expanded === "panel4"}
               onChange={handleChange("panel4")}
             >
@@ -174,8 +180,8 @@ export default function FAQ() {
                   eco-friendly products and make a sustainable choice.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
-            <Accordion
+            </StyleAccordion>
+            <StyleAccordion
               expanded={expanded === "panel5"}
               onChange={handleChange("panel5")}
             >
@@ -201,8 +207,8 @@ export default function FAQ() {
                   bags.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
-            <Accordion
+            </StyleAccordion>
+            <StyleAccordion
               expanded={expanded === "panel6"}
               onChange={handleChange("panel6")}
             >
@@ -227,8 +233,8 @@ export default function FAQ() {
                   on customization options.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
-            <Accordion
+            </StyleAccordion>
+            <StyleAccordion
               expanded={expanded === "panel7"}
               onChange={handleChange("panel7")}
             >
@@ -254,8 +260,8 @@ export default function FAQ() {
                   for more ways to get involved.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
-            <Accordion
+            </StyleAccordion>
+            <StyleAccordion
               expanded={expanded === "panel8"}
               onChange={handleChange("panel8")}
             >
@@ -279,8 +285,8 @@ export default function FAQ() {
                   for eco-friendly disposal.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
-            <Accordion
+            </StyleAccordion>
+            <StyleAccordion
               expanded={expanded === "panel9"}
               onChange={handleChange("panel9")}
             >
@@ -305,8 +311,8 @@ export default function FAQ() {
                   durability.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
-            <Accordion
+            </StyleAccordion>
+            <StyleAccordion
               expanded={expanded === "panel10"}
               onChange={handleChange("panel10")}
             >
@@ -331,7 +337,7 @@ export default function FAQ() {
                   guidelines for sustainable waste management.
                 </Answer>
               </AccordionDetails>
-            </Accordion>
+            </StyleAccordion>
           </Body>
         </Grid>
       </Grid>
