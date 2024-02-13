@@ -57,7 +57,7 @@ function MainSlider() {
   };
 
   return (
-    <Box sx={{ maxWidth: "100vw", minHeight: "100vh", position:"relative"}}>
+    <Box sx={{ maxWidth: "100vw", minHeight: "100vh", position:"relative"}} id="ms">
 
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}

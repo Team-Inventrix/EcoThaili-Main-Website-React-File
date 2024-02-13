@@ -85,6 +85,7 @@ const FooterLink = styled(Link)({
   marginBottom: ".5rem",
   color:"#2B2B60",
   opacity: ".7",
+  cursor: "pointer",
   textDecoration: "none",
   '&:hover': {
     opacity: "1"
@@ -104,6 +105,29 @@ function Copyright() {
 }
 
 export default function Footer() {
+
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    const offset = 128;
+    if (globalThis.location.pathname === '/') {
+      const targetScroll = sectionElement.offsetTop - offset;
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+      globalThis.scrollTo({
+        top: targetScroll,
+        behavior: "smooth",
+      });
+      setOpen(false);
+    } else {
+      globalThis.location.href = '/#' + sectionId;
+    }
+  };
+
   return (
     <StyledContainer maxWidth={false}>
       <UpperFooter>
@@ -152,20 +176,20 @@ export default function Footer() {
           <FooterTitle>
             EcoThaili
           </FooterTitle>
-          <FooterLink href="#os">
+          <FooterLink onClick={() => scrollToSection("os")}>
             Our Story
           </FooterLink>
-          <FooterLink href="#pwas">
+          <FooterLink onClick={() => scrollToSection("pwas")}>
             Problem We are Solving
           </FooterLink>
-          <FooterLink href="#mc">
+          <FooterLink onClick={() => scrollToSection("mc")}>
             Material Composition
           </FooterLink>
-          <FooterLink href="#oi">
+          <FooterLink onClick={() => scrollToSection("oi")}>
             Our Impact
           </FooterLink>
 
-          <FooterLink href="#faq">
+          <FooterLink onClick={() => scrollToSection("faq")}>
             FAQs
           </FooterLink>
         </Box>
@@ -179,7 +203,7 @@ export default function Footer() {
           <FooterTitle variant="body2" fontWeight={600}>
             Company
           </FooterTitle>
-          <FooterLink color="text.secondary" href="#a">
+          <FooterLink color="text.secondary" onClick={() => scrollToSection("a")}>
             About us
           </FooterLink>
           <FooterLink color="text.secondary">Careers (no page yet)</FooterLink>
@@ -194,10 +218,10 @@ export default function Footer() {
           <FooterTitle>
             Legal
           </FooterTitle>
-          <FooterLink color="text.secondary" href="#">
+          <FooterLink color="text.secondary" href="/terms">
             Terms
           </FooterLink>
-          <FooterLink color="text.secondary" href="#">
+          <FooterLink color="text.secondary" href="/privacy">
             Privacy
           </FooterLink>
           <FooterLink color="text.secondary" href="#">
@@ -207,13 +231,13 @@ export default function Footer() {
       </UpperFooter>
       <LowerFooter>
         <div>
-          <FooterLink color="text.secondary" href="#">
+          <FooterLink color="text.secondary" href="/privacy">
             Privacy Policy
           </FooterLink>
           <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
             &nbsp;•&nbsp;
           </Typography>
-          <FooterLink color="text.secondary" href="#">
+          <FooterLink color="text.secondary" href="/terms">
             Terms of Service
           </FooterLink>
         </div>

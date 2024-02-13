@@ -28,16 +28,27 @@ function Header() {
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     const offset = 128;
-    if (sectionElement) {
-      const targetScroll = sectionElement.offsetTop - offset;
-      sectionElement.scrollIntoView({ behavior: "smooth" });
-      window.scrollTo({
-        top: targetScroll,
-        behavior: "smooth",
-      });
-      setOpen(false);
+    if (globalThis.location.pathname === '/') {
+      if (sectionId === '') {
+        globalThis.location.href = '/';
+      } else if (sectionElement) {
+        const targetScroll = sectionElement.offsetTop - offset;
+        sectionElement.scrollIntoView({ behavior: "smooth" });
+        globalThis.scrollTo({
+          top: targetScroll,
+          behavior: "smooth",
+        });
+        setOpen(false);
+      }
+    } else {
+      if (sectionId === ' ') {
+        globalThis.location.href = '/';
+      } else {
+        globalThis.location.href = '/#' + sectionId;
+      }
     }
   };
+  
 
   return (
     <div>
@@ -86,7 +97,7 @@ function Header() {
                 px: 0,
               }}
             >
-              <img src={LogoImg} style={logoStyle} alt="EcoThaili" />
+              <img src={LogoImg} style={logoStyle} alt="EcoThaili" onClick={() => scrollToSection("ms")} />
               <Box
                 sx={{ display: { xs: "none", md: "flex", margin: "100px" } }}
               >
