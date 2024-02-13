@@ -9,8 +9,13 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
+    assignees:
+      - "Ningsang-Jabegu"
+      - "roshan770"
       
   - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/.github/" # Location of package manifests
     schedule:
       interval: "monthly"
+    assignees:
+      - "Kshitiz-Mhto"
