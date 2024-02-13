@@ -12,18 +12,17 @@ Our mission is to protect our only planet, by creating eco-friendly plastic from
 <br>
 🌿#EcoThaili #BeatPlasticWithUs
 </p>
+<br>
 
 ## Comprehensive Guide to Setup the Project in Our Local Machine
 
-This guide will walk you through the steps to set up the project on your local machine.
-
-## Prerequisites
+### Prerequisites
 Make sure you have the following installed on your machine:
 - Node.js
 - npm (Node Package Manager)
 - git (If you want to upload you changes through the terminal)
 
-## Steps
+### Steps
 0. **Pre Cloning Steps** (For new to GitHub)
    - If you are new to GitHub then, you probably don't know about GitHub, so follow these steps:
       - First Download & Install git from [git](https://git-scm.com/downloads)
@@ -203,6 +202,6 @@ add your email address here which should be enclosed in quotes. <br><br>(Pro Tip
 > [!IMPORTANT]
 > PR must be from branch where you have pushed your changes, to the base branch of our repository ie, main branch.
 
-## Additional Notes
-- Make sure to consult the project's documentation or README for any specific instructions or requirements.
-- If you encounter any issues during setup or while running the application, refer to the project's issue tracker or seek help from the project maintainers.
+> [!NOTE]
+> Make sure to consult the project's documentation or README for any specific instructions or requirements.
+> If you encounter any issues during setup or while running the application, refer to the project's issue tracker or seek help from the project maintainers.
