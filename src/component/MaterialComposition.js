@@ -3,19 +3,19 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
-// import ManufacturingProcessChart from "../image/designedImages/manufacturing.png";
+import ManufacturingProcessChart from "../image/designedImages/manufacturing.png";
+import MaterialCompositionChart from "../image/designedImages/composition.png";
 
 const StyledContainer = styled(Container)({
-  padding: "5rem 1.5rem",
-  height: "100%",
+  // padding: "5rem 1.5rem",
+  minHeight: "100vh",
   width: "100%",
   background: "#EFEEEF",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   "@media (min-width:600px)": {
-    padding: "15rem",
-    height: "100vh",
+    // padding: "15rem",
     textAlign: "center",
   },
 });
@@ -25,25 +25,42 @@ const Title = styled(Typography)({
   textAlign: "center",
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
-  margin: "3rem 0",
+  margin: "3rem 0 0 0",
 });
 
 const Body = styled(Typography)({
   color: "#2B2B60",
   textAlign: "justify",
-  fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
-  lineHeight: "1.5",
+  
   "@media (min-width:600px)": {
     textAlign: "center",
   },
 });
 
+const ImageContainer = styled("figure")({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "1rem",
+  margin: "5rem auto",
+  "@media (min-width:600px)": {
+    maxWidth:"1050px"
+  },
+});
+
 const StyledImage = styled("img")({
   width: "100%",
-  height: "auto",
+  height: "100%",
   background: "#EFEEEF",
+  // border: "2px solid red",
   // marginBottom:'-.4rem' // To hide the small space below the image
 });
+
+const ImageName = styled(Typography)({
+  fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
+  lineHeight: "1.5",
+})
 
 export default function OurStory() {
   return (
@@ -54,21 +71,21 @@ export default function OurStory() {
             Material Composition
           </Title>
           <Body variant="body1">
-            <div style={{background:"#2B2B60", height:"max-content", width:"100%", color:"#EFEEEF",padding:"1rem .5rem"}}>
-              {/* <StyledImage
+            <ImageContainer>
+              <StyledImage
                 alt="Manufacturing Process"
                 src={ManufacturingProcessChart}
-              /> */}
-              [Manufacturing Process Flow chart will be updated soon]
-            </div>
-            <br></br>
-            <div style={{background:"#2B2B60", height:"max-content", width:"100%", color:"#EFEEEF",padding:"1rem .5rem"}}>
-              {/* <StyledImage
-                alt="Manufacturing Process"
-                src={ManufacturingProcessChart}
-              /> */}
-              [Composition Flow chart will be updated soon]
-            </div>
+              />
+              <ImageName>Manufacturing Process</ImageName>
+            </ImageContainer>
+
+            <ImageContainer>
+              <StyledImage
+                alt="Material Composition"
+                src={MaterialCompositionChart}
+              />
+              <ImageName>Material Composition</ImageName>
+            </ImageContainer>
           </Body>
         </Grid>
       </Grid>
