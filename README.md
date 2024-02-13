@@ -1,4 +1,19 @@
-# Comprehensive Guide to Setup the Project in Our Local Machine
+<p align="center">
+	<img src="./public/assets/logo.png" alt="homescreen" width="370" height="auto">
+  <h1 align="center">EcoThaili (Ikō thailī)</h1>
+</p>
+
+<p align="center">
+Our mission is to protect our only planet, by creating eco-friendly plastic from banana crop waste.
+<br>
+ It's not just a bag; it's a promise to nurture our planet. Every use is a step towards a cleaner, greener future. 
+ <br>
+ Together, let's make a difference.
+<br>
+🌿#EcoThaili #BeatPlasticWithUs
+</p>
+
+## Comprehensive Guide to Setup the Project in Our Local Machine
 
 This guide will walk you through the steps to set up the project on your local machine.
 
