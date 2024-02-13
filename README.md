@@ -88,33 +88,40 @@ Make sure you have the following installed on your machine:
      npm install react-scroll
      ```
 
-5. **Run the Application**:
+5. **Install Image Slilder**:
+   - used as slider library 
+     ```
+     npm install react-swipeable-views-react-18
+     npm install --save react-swipeable-views-utils
+     ```
+
+6. **Run the Application**:
    - After the installation is complete, run the following command to start the development server (If the error arises at this point, then remember that there are other things to install on your local machine, so for that, either you can go through the error and try to install what it is actually wanting from you, or you can contact the developer, @Ningsang-Jabegu or @roshan770, for the error to be solved. But this is a rare case; we will be updating this file as we progress with the web development. For those who are new to web development, each time you pull from this repository, please keep an eye on this file so that you won't get distracted by the errors.):
      ```
      npm start
      ```
    - This will start the development server and open the application in your default web browser.
 
-6. **View the Application**:
+7. **View the Application**:
    - Once the development server has started, you can view the application by navigating to `http://localhost:3000` in your web browser.
 
-7. **Explore the Code**:
+8. **Explore the Code**:
    - You can now explore the project files and make any necessary modifications using your preferred code editor.
 
-8. **Build for Production** (Optional & not required to do this step, but this will be automatically build by vercel itself in our case):
+9. **Build for Production** (Optional & not required to do this step, but this will be automatically build by vercel itself in our case):
    - If you want to build the project for production, you can run the following command:
      ```
      npm run build
      ```
    - This will create a build folder containing optimized production-ready files.
 
-9. **Additional info to Build** :
+10. **Additional info to Build** :
    - Now you can change the code, and its content for the project.
    
    - If you did run the build command and get the build folder, for your knowledge, when we push the code without running build, actually, Vercel in our case will first run the build command itself, and it will get the optimized HTML, CSS, and JS, which is what will be rendered in the final deployment.
    - The website that we see at final is not our code that we have pushed or is pushing in this repo, but actually it is the build version of our React project. I hope you guys (especially those who are beginners in front-end or web development) understand!
 
-10. **Initial commit to the GitHub** (Begineer's Step) :
+11. **Initial commit to the GitHub** (Begineer's Step) :
     - If you are trying to push your change for the first time then run the command:
       ```
       git remote add origin https://github.com/Team-Inventrix/Team-Inventrix-Main-Website-React-File.git
@@ -132,7 +139,7 @@ add your email address here which should be enclosed in quotes. <br><br>(Pro Tip
 
     - Now you are finally ready to push you code to the GitHub. Remember these steps if you done once, you are now set and do not need to do anything stated in the step 10. You can directly jump from step 9 to step 11 for next time
 
-11. **Commit your change to the GitHub** :
+12. **Commit your change to the GitHub** :
     - Since for development, we are using dev branch so to create a new branch run the command :
       ```
       git branch -m main
