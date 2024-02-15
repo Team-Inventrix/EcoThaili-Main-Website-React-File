@@ -8,7 +8,7 @@ import MaterialCompositionChart from "../image/designedImages/composition.png";
 
 const StyledContainer = styled(Container)({
   // padding: "5rem 1.5rem",
-  minHeight: "100vh",
+  // minHeight: "100vh",
   width: "100%",
   background: "#EFEEEF",
   display: "flex",
@@ -38,6 +38,8 @@ const Body = styled(Typography)({
 });
 
 const ImageContainer = styled("figure")({
+  minHeight:"100%",
+  maxWidth:"100vw",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -45,7 +47,8 @@ const ImageContainer = styled("figure")({
   gap: "1rem",
   margin: "5rem auto",
   "@media (min-width:600px)": {
-    maxWidth:"1050px"
+    minHeight:"100vh",
+    maxWidth:"90vw"
   },
 });
 
