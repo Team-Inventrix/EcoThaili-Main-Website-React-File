@@ -84,7 +84,7 @@ const FooterLink = styled(Link)({
   fontWeight: "400",
   marginBottom: ".5rem",
   color:"#2B2B60",
-  opacity: ".7",
+  opacity: ".8",
   cursor: "pointer",
   textDecoration: "none",
   '&:hover': {
@@ -96,9 +96,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       <FooterBody>
-      {"Copyright © "}
-      <FooterLink href="/">EcoThaili&nbsp;</FooterLink>
-      {new Date().getFullYear()}
+      {"© " + new Date().getFullYear() + " EcoThaili. All Rights Reserved. Website by "}
+      <FooterLink > Team Inventrix </FooterLink>
       </FooterBody>
     </Typography>
   );
@@ -207,6 +206,7 @@ export default function Footer() {
             About us
           </FooterLink>
           <FooterLink color="text.secondary">Careers (no page yet)</FooterLink>
+          <FooterLink color="text.secondary" href="/contact">Contact</FooterLink>
         </Box>
         <Box
           sx={{
@@ -223,9 +223,6 @@ export default function Footer() {
           </FooterLink>
           <FooterLink color="text.secondary" href="/privacy">
             Privacy
-          </FooterLink>
-          <FooterLink color="text.secondary" href="#">
-            Contact
           </FooterLink>
         </Box>
       </UpperFooter>
