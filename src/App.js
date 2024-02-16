@@ -4,14 +4,14 @@ import HomePage from "./page/HomePage";
 import ErrorPage from "./page/ErrorPage";
 import TermsPage from "./page/TermsPage";
 import PrivacyPage from "./page/PrivacyPage";
-import Login from "./component/login";
-import SignUp from "./component/Sign_Up";
+import ContactPage from "./page/ContactPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/*" element={<ErrorPage />} />

@@ -84,7 +84,7 @@ const FooterLink = styled(Link)({
   fontWeight: "400",
   marginBottom: ".5rem",
   color: "#2B2B60",
-  opacity: ".7",
+  opacity: ".8",
   cursor: "pointer",
   textDecoration: "none",
   "&:hover": {
@@ -96,9 +96,10 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       <FooterBody>
-        {"Copyright © "}
-        <FooterLink href="/">EcoThaili&nbsp;</FooterLink>
-        {new Date().getFullYear()}
+        {"© " +
+          new Date().getFullYear() +
+          " EcoThaili. All Rights Reserved. Website by "}
+        <FooterLink> Team Inventrix </FooterLink>
       </FooterBody>
     </Typography>
   );
@@ -203,6 +204,9 @@ export default function Footer() {
             About us
           </FooterLink>
           <FooterLink color="text.secondary">Careers (no page yet)</FooterLink>
+          <FooterLink color="text.secondary" href="/contact">
+            Contact
+          </FooterLink>
         </Box>
         <Box
           sx={{
@@ -218,31 +222,9 @@ export default function Footer() {
           <FooterLink color="text.secondary" href="/privacy">
             Privacy
           </FooterLink>
-          <FooterLink color="text.secondary" href="#">
-            Contact
-          </FooterLink>
         </Box>
       </UpperFooter>
       <LowerFooter>
-        <div>
-          <FooterLink color="text.secondary" href="/privacy">
-            Privacy Policy
-          </FooterLink>
-          <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
-            &nbsp;•&nbsp;
-          </Typography>
-          <FooterLink color="text.secondary" href="/terms">
-            Terms of Service
-          </FooterLink>
-        </div>
-
-        <Copyright />
-        {/* <ScrollLink to="os" smooth={true} duration={2000}>
-          <Typography variant="body2" sx={footerLinkStyle}>
-            Back to Top
-          </Typography>
-        </ScrollLink> */}
-
         <Stack
           direction="row"
           justifyContent="left"
@@ -292,6 +274,26 @@ export default function Footer() {
             <FacebookIcon />
           </IconButton>
         </Stack>
+
+        <Copyright />
+
+        <div>
+          <FooterLink color="text.secondary" href="/privacy">
+            Privacy Policy
+          </FooterLink>
+          <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
+            &nbsp;•&nbsp;
+          </Typography>
+          <FooterLink color="text.secondary" href="/terms">
+            Terms of Service
+          </FooterLink>
+        </div>
+
+        {/* <ScrollLink to="os" smooth={true} duration={2000}>
+          <Typography variant="body2" sx={footerLinkStyle}>
+            Back to Top
+          </Typography>
+        </ScrollLink> */}
       </LowerFooter>
     </StyledContainer>
   );
