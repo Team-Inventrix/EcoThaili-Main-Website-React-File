@@ -9,23 +9,23 @@ import MaterialCompositionChart from "../image/designedImages/composition.png";
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",
   width: "100%",
-  background: "#226a49",
+  // background: "#226a49",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   "@media (min-width:600px)": {
-    padding: "0 15rem",
+    padding: "5rem 15rem 9rem 15rem",
     textAlign: "center",
     minHeight: "100vh",
   },
 });
 
 const Title = styled(Typography)({
-  color: "#EFEEEF",
+  color: "#226a49",
   textAlign: "center",
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
-  margin: "3rem 0",
+  // margin: "3rem 0",
   "@media (min-width:600px)": {
     marginBottom: "6rem"
   },
@@ -44,9 +44,8 @@ const StyledImage = styled("img")({
   height:"auto",
   width:"100%",
   "@media (min-width:600px)": {
-    height: "50vh",
-    width: "auto",
-
+    height: "auto",
+    width: "100%",
   },
   // background: "#EFEEEF",
   // border: "2px solid red",
@@ -58,18 +57,18 @@ const ImageName = styled(Typography)({
   lineHeight: "1.5",
 });
 
-export default function OurStory() {
+export default function ManufacturingProcess() {
   return (
-    <StyledContainer id="mc" maxWidth={false}>
+    <StyledContainer id="mp" maxWidth={false}>
       <Grid container spacing={6}>
         <Grid item xs={12} md={12}>
           <Title component="h2" variant="h4">
-            Material Composition
+            Manufacturing Process
           </Title>
           <Body variant="body1">
               <StyledImage
-                alt="Material Composition"
-                src={MaterialCompositionChart}
+                alt="Manufacturing Composition"
+                src={ManufacturingProcessChart}
               />
           </Body>
         </Grid>

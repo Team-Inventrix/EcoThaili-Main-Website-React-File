@@ -3,8 +3,8 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
-import Button from '@mui/material/Button';
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
+import Button from "@mui/material/Button";
 
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",
@@ -15,7 +15,7 @@ const StyledContainer = styled(Container)({
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  '@media (min-width:600px)': {
+  "@media (min-width:600px)": {
     textAlign: "center",
   },
 });
@@ -27,7 +27,7 @@ const Title = styled(Typography)({
   fontSize: "clamp(2rem, 3vw, 3rem)",
   margin: "0 0 3rem 0",
   position: "relative",
-  '&::after': {
+  "&::after": {
     content: '""',
     display: "block",
     margin: "0 auto",
@@ -35,7 +35,7 @@ const Title = styled(Typography)({
     maxWidth: "70%",
     paddingTop: "0.5rem",
     borderBottom: ".5px solid #EFEEEF",
-  }
+  },
 });
 
 const Body = styled(Typography)({
@@ -43,9 +43,9 @@ const Body = styled(Typography)({
   textAlign: "justify",
   fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
   lineHeight: "1.7",
-  '@media (min-width:600px)': {
-    textAlign: "center"
-  }
+  "@media (min-width:600px)": {
+    textAlign: "center",
+  },
 });
 
 export default function PageNotFound() {
@@ -58,10 +58,16 @@ export default function PageNotFound() {
             404 Page Not Found
           </Title>
           <Body variant="body1">
-            Despite our expertise in creating web pages, we regret to inform you that the specific page you’re searching for does not exist on our website. We apologize for any inconvenience this may cause.
+            Despite our expertise in creating web pages, we regret to inform you
+            that the specific page you’re searching for does not exist on our
+            website. We apologize for any inconvenience this may cause.
           </Body>
-          <br/>
-          <Button variant="contained" color="secondary" onClick={() => globalThis.location.href='/'}>
+          <br />
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => (globalThis.location.href = "/")}
+          >
             Return to Homepage
           </Button>
         </Grid>

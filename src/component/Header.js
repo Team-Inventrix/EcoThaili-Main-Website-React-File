@@ -51,7 +51,7 @@ function Header() {
   
 
   return (
-    <div>
+    <div >
       <AppBar
         position="fixed"
         sx={{
@@ -62,7 +62,7 @@ function Header() {
           width: "100%",
         }}
       >
-        <Container maxWidth="lg" sx={{
+        <Container maxWidth="xl" sx={{
           // zIndex: '5'
         }}>
           <Toolbar
@@ -123,6 +123,14 @@ function Header() {
                 >
                   <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
                     Material Composition
+                  </Typography>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => scrollToSection("mp")}
+                  sx={{ py: "6px", px: "12px" }}
+                >
+                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
+                    Manufacturing Process
                   </Typography>
                 </MenuItem>
                 <MenuItem

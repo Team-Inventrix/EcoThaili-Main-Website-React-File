@@ -11,6 +11,7 @@ import Product from "../component/Product";
 import MainSlider from "../component/MainSlider";
 import TermsAndCondition from "../component/TermsAndCondition";
 import PrivacyPolicy from "../component/PrivacyPolicy";
+import ManufacturingProcess from "../component/ManufacturingProcess";
 
 export default function HomePage() {
   useEffect(() => {
@@ -30,6 +31,7 @@ export default function HomePage() {
       <OurStory active_item="Our Story" id="os" />
       <ProblemWeAreSolving active_item="Our Story" id="pwas" />
       <MaterialComposition active_item="Our Story" id="mc" />
+      <ManufacturingProcess active_item="Our Story" id="mp" />
       <OurImpact active_item="Our Story" id="oi" />
       <Product active_item="Our Story" id="product" />
       <FAQ active_item="Our Story" id="faq" />

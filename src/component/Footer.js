@@ -61,21 +61,21 @@ const LowerFooter = styled(Box)({
   paddingTop: "1rem",
   marginTop: "1rem",
   width: "100%",
-  borderTop: "1px solid #2B2B60",
+  borderTop: "1px solid #226a49",
 });
 
 const FooterTitle = styled(Typography)({
   fontSize: "clamp(1rem, 2vw, 1.5rem)",
   fontWeight: "600",
   marginBottom: ".5rem",
-  color: "#2B2B60",
+  color: "#226a49",
 });
 
 const FooterBody = styled(Typography)({
   fontSize: "clamp(.7rem, 2vw, 1rem)",
   fontWeight: "400",
   marginBottom: ".5rem",
-  color: "#2B2B60",
+  color: "#226a49",
   opacity: ".7",
 });
 
@@ -83,7 +83,7 @@ const FooterLink = styled(Link)({
   fontSize: "clamp(.7rem, 2vw, 1rem)",
   fontWeight: "400",
   marginBottom: ".5rem",
-  color: "#2B2B60",
+  color: "#226a49",
   opacity: ".8",
   cursor: "pointer",
   textDecoration: "none",
@@ -142,6 +142,7 @@ export default function Footer() {
             </FooterBody>
             <Stack direction="row" spacing={1} useFlexGap>
               <TextField
+                border="2px solid #226a49"
                 id="outlined-basic"
                 hiddenLabel
                 size="small"
@@ -152,12 +153,13 @@ export default function Footer() {
                 inputProps={{
                   autocomplete: "off",
                   ariaLabel: "Enter your email address",
+                  // style: { color: '#226A49', borderColor: '#226A49' } 
                 }}
               />
               <Button
                 variant="contained"
                 color="primary"
-                sx={{ flexShrink: 0, bgcolor: "#2B2B60" }}
+                sx={{ flexShrink: 0, bgcolor: "#226a49" }}
               >
                 Subscribe
               </Button>
@@ -180,6 +182,9 @@ export default function Footer() {
           </FooterLink>
           <FooterLink onClick={() => scrollToSection("mc")}>
             Material Composition
+          </FooterLink>
+          <FooterLink onClick={() => scrollToSection("mp")}>
+            Manufacturing Process
           </FooterLink>
           <FooterLink onClick={() => scrollToSection("oi")}>
             Our Impact
@@ -235,7 +240,7 @@ export default function Footer() {
           }}
         >
           <IconButton
-            color="inherit"
+            color="#226a49"
             target="_blank"
             href="https://github.com/Team-Inventrix"
             aria-label="GitHub"
@@ -245,7 +250,7 @@ export default function Footer() {
           </IconButton>
 
           <IconButton
-            color="inherit"
+            color="#226a49"
             target="_blank"
             href="https://www.linkedin.com/in/team-inventrix-9a35712b0/"
             aria-label="LinkedIn"
@@ -255,7 +260,7 @@ export default function Footer() {
           </IconButton>
 
           <IconButton
-            color="inherit"
+            color="#226a49"
             target="_blank"
             href="https://www.youtube.com/@team-inventrix"
             aria-label="YouTube"
@@ -265,7 +270,7 @@ export default function Footer() {
           </IconButton>
 
           <IconButton
-            color="inherit"
+            color="#226a49"
             target="_blank"
             href="https://www.facebook.com/profile.php?id=61555879292763"
             aria-label="Facebook"

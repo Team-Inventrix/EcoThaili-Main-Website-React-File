@@ -55,24 +55,46 @@ function MainSlider() {
     setActiveStep(step);
   };
 
-  const StyledContainer = styled(Container)({
+  const StyledContainer = {
     padding: "5rem 1.5rem",
-   
-    '@media (min-width:600px)': {
+    "@media (min-width:600px)": {
       // padding: "5rem",
       textAlign: "center",
     },
-  });
+  };
 
   return (
-    <Container id="os" sx={{ py: { xs: 8, sm: 16 } }}>
-      <Grid container spacing={6}>
+    <Container
+      id="os"
+      sx={{
+        py: { xs: 8, sm: 16, md: 8 },
+        px: { xs: "0",sm:"0", md: 0 },
+        pb: { md: "0" },
+        pt: { sm:"5rem"},
+        mt: { xs: "1rem",},
+        mb: { xs: "-4rem",sm:"-8rem", md: "-2rem" },
+        minHeight: { xs: "50vh", md: "100vh" },
+        maxWidth: {md:"100%"},
+        overflow:{md:"hidden"}
+      }}
+      maxWidth={false}
+    >
+      <Grid
+        container
+        sx={{
+          minWidth: { xs: "100vw" },
+          maxHeight: { md: "90vh" },
+          margin: { xs: "0", md: "2rem 0" },
+          px:{xs:"0"},
+        }}
+        overflow="hidden"
+      >
         <Grid item xs={12} md={12}>
           <div>
             <Box
               sx={{
                 // maxWidth: "100vw",
-                // minHeight: "100vh",
+                // minHeight: "70vh",
                 position: "relative",
               }}
               id="ms"
@@ -87,8 +109,8 @@ function MainSlider() {
                   <div
                     key={step.label}
                     style={{
-                      aspectRatio: "16/9",
-                      width: "100%",
+                      // aspectRatio: "16/9",
+                      height: "100%",
                       overflow: "hidden",
                     }}
                   >
@@ -102,7 +124,7 @@ function MainSlider() {
                           overflow: "hidden",
                           // minWidth: "100%",
                           margin: "auto",
-                          objectFit: "contain",
+                          objectFit: "fill",
                           objectPosition: "center",
                         }}
                         src={step.imgPath}
