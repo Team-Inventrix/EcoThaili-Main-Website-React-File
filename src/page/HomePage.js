@@ -12,6 +12,7 @@ import MainSlider from "../component/MainSlider";
 import TermsAndCondition from "../component/TermsAndCondition";
 import PrivacyPolicy from "../component/PrivacyPolicy";
 import ManufacturingProcess from "../component/ManufacturingProcess";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function HomePage() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function HomePage() {
 
   return (
     <>
+      <SpeedInsights />
       <MainSlider />
       <Header active_item="Our Story" />
       <OurStory active_item="Our Story" id="os" />

@@ -7,13 +7,11 @@ import PrivacyPage from "./page/PrivacyPage";
 import ContactPage from "./page/ContactPage";
 import SignInPage from "./page/SignInPage";
 import SignUpPage from "./page/SignUpPage";
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <SpeedInsights/>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
