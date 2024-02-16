@@ -9,13 +9,14 @@ import BioThaili from "../image/products/bio-plastic.webp";
 import BioGranuels from "../image/products/bio-granuels.webp";
 import BioCellulos from "../image/products/bio-cellulos.webp";
 import OrderIcon from "@mui/icons-material/ShoppingCart";
+import Link from "@mui/material/Link";
 
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",
   minHeight: "100vh",
   width: "100%",
   margin: "auto",
-  background: "#EFEEEF",
+  // background: "#EFEEEF",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -25,7 +26,7 @@ const StyledContainer = styled(Container)({
 });
 
 const Title = styled(Typography)({
-  color: "#2B2B60",
+  color: "#226a49",
   textAlign: "center",
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)",
@@ -66,8 +67,8 @@ const ProductContainer = styled(Box)({
 const ProductImage = styled("img")({
   width: "100%",
   aspectRatio: "5/4",
-  objectFit: "cover"
-})
+  objectFit: "cover",
+});
 
 const ProductName = styled(Typography)({
   // background: "#2B2B60",
@@ -103,10 +104,7 @@ export default function OurStory() {
           </Title>
           <ProductBoard>
             <ProductContainer>
-              <ProductImage
-                src={BioThaili}
-                alt="Product"
-              />
+              <ProductImage src={BioThaili} alt="Product" />
               <ProductName variant="h5" component="div">
                 EcoThaili (इको थैली)
               </ProductName>
@@ -114,15 +112,21 @@ export default function OurStory() {
                 Rs. 250 per Roll
               </Price>
               <BuyButton variant="contained">
-                Order Now ! &nbsp; <OrderIcon />
+                <Link
+                  href="/login"
+                  style={{
+                    color: "white",
+                    textDecoration: "none",
+                  }}
+                >
+                  Order Now ! &nbsp;
+                </Link>
+                <OrderIcon />
               </BuyButton>
             </ProductContainer>
 
             <ProductContainer>
-              <ProductImage
-                src={BioGranuels}
-                alt="Product"
-              />
+              <ProductImage src={BioGranuels} alt="Product" />
               <ProductName variant="h5" component="div">
                 EcoGranuels (इको ग्रान्युल्स)
               </ProductName>
@@ -130,15 +134,21 @@ export default function OurStory() {
                 Rs. 1000 per KG
               </Price>
               <BuyButton variant="contained">
-                Order Now ! &nbsp; <OrderIcon />
+                <Link
+                  href="/login"
+                  style={{
+                    color: "white",
+                    textDecoration: "none",
+                  }}
+                >
+                  Order Now ! &nbsp;
+                </Link>
+                <OrderIcon />
               </BuyButton>
             </ProductContainer>
 
             <ProductContainer>
-              <ProductImage
-                src={BioCellulos}
-                alt="Product"
-              />
+              <ProductImage src={BioCellulos} alt="Product" />
               <ProductName variant="h5" component="div">
                 EcoCellulos (इको सेल्युलोस)
               </ProductName>
@@ -146,10 +156,18 @@ export default function OurStory() {
                 Rs. 2000 per KG
               </Price>
               <BuyButton variant="contained">
-                Order Now ! &nbsp; <OrderIcon />
+                <Link
+                  href="/login"
+                  style={{
+                    color: "white",
+                    textDecoration: "none",
+                  }}
+                >
+                  Order Now ! &nbsp;
+                </Link>
+                <OrderIcon />
               </BuyButton>
             </ProductContainer>
-
           </ProductBoard>
         </Grid>
       </Grid>
