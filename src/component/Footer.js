@@ -51,7 +51,7 @@ const LogoSide = styled(Box)({
   gap: 4,
   minWidth: "100%",
   "@media (min-width:600px)": {
-    minWidth: "60%"
+    minWidth: "60%",
   },
 });
 
@@ -68,44 +68,43 @@ const FooterTitle = styled(Typography)({
   fontSize: "clamp(1rem, 2vw, 1.5rem)",
   fontWeight: "600",
   marginBottom: ".5rem",
-  color:"#2B2B60",
-})
+  color: "#2B2B60",
+});
 
 const FooterBody = styled(Typography)({
   fontSize: "clamp(.7rem, 2vw, 1rem)",
   fontWeight: "400",
   marginBottom: ".5rem",
-  color:"#2B2B60",
+  color: "#2B2B60",
   opacity: ".7",
-})
+});
 
 const FooterLink = styled(Link)({
   fontSize: "clamp(.7rem, 2vw, 1rem)",
   fontWeight: "400",
   marginBottom: ".5rem",
-  color:"#2B2B60",
+  color: "#2B2B60",
   opacity: ".7",
   cursor: "pointer",
   textDecoration: "none",
-  '&:hover': {
-    opacity: "1"
-  }
-})
+  "&:hover": {
+    opacity: "1",
+  },
+});
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       <FooterBody>
-      {"Copyright © "}
-      <FooterLink href="/">EcoThaili&nbsp;</FooterLink>
-      {new Date().getFullYear()}
+        {"Copyright © "}
+        <FooterLink href="/">EcoThaili&nbsp;</FooterLink>
+        {new Date().getFullYear()}
       </FooterBody>
     </Typography>
   );
 }
 
 export default function Footer() {
-
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -115,7 +114,7 @@ export default function Footer() {
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     const offset = 128;
-    if (globalThis.location.pathname === '/') {
+    if (globalThis.location.pathname === "/") {
       const targetScroll = sectionElement.offsetTop - offset;
       sectionElement.scrollIntoView({ behavior: "smooth" });
       globalThis.scrollTo({
@@ -124,7 +123,7 @@ export default function Footer() {
       });
       setOpen(false);
     } else {
-      globalThis.location.href = '/#' + sectionId;
+      globalThis.location.href = "/#" + sectionId;
     }
   };
 
@@ -136,9 +135,7 @@ export default function Footer() {
             <Box>
               <img src={Ecothaili} style={logoStyle} alt="Ecothaili" />
             </Box>
-            <FooterTitle variant="body2">
-              Newsletter
-            </FooterTitle>
+            <FooterTitle variant="body2">Newsletter</FooterTitle>
             <FooterBody>
               Subscribe to our newsletter for weekly updates and promotions.
             </FooterBody>
@@ -159,7 +156,7 @@ export default function Footer() {
               <Button
                 variant="contained"
                 color="primary"
-                sx={{ flexShrink: 0, bgcolor:"#2B2B60" }}
+                sx={{ flexShrink: 0, bgcolor: "#2B2B60" }}
               >
                 Subscribe
               </Button>
@@ -173,9 +170,7 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <FooterTitle>
-            EcoThaili
-          </FooterTitle>
+          <FooterTitle>EcoThaili</FooterTitle>
           <FooterLink onClick={() => scrollToSection("os")}>
             Our Story
           </FooterLink>
@@ -189,9 +184,7 @@ export default function Footer() {
             Our Impact
           </FooterLink>
 
-          <FooterLink onClick={() => scrollToSection("faq")}>
-            FAQs
-          </FooterLink>
+          <FooterLink onClick={() => scrollToSection("faq")}>FAQs</FooterLink>
         </Box>
         <Box
           sx={{
@@ -203,7 +196,10 @@ export default function Footer() {
           <FooterTitle variant="body2" fontWeight={600}>
             Company
           </FooterTitle>
-          <FooterLink color="text.secondary" onClick={() => scrollToSection("a")}>
+          <FooterLink
+            color="text.secondary"
+            onClick={() => scrollToSection("a")}
+          >
             About us
           </FooterLink>
           <FooterLink color="text.secondary">Careers (no page yet)</FooterLink>
@@ -215,9 +211,7 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <FooterTitle>
-            Legal
-          </FooterTitle>
+          <FooterTitle>Legal</FooterTitle>
           <FooterLink color="text.secondary" href="/terms">
             Terms
           </FooterLink>

@@ -12,11 +12,11 @@ const StyledContainer = styled(Container)({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  zIndex:"2",
-  '@media (min-width:600px)': {
+  zIndex: "2",
+  "@media (min-width:600px)": {
     padding: "15rem",
     height: "100vh",
-    textAlign: "center"
+    textAlign: "center",
   },
 });
 
@@ -33,9 +33,9 @@ const Body = styled(Typography)({
   textAlign: "justify",
   fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
   lineHeight: "1.7",
-  '@media (min-width:600px)': {
-    textAlign: "center"
-  }
+  "@media (min-width:600px)": {
+    textAlign: "center",
+  },
 });
 
 export default function OurStory() {
@@ -47,11 +47,11 @@ export default function OurStory() {
             The EcoThaili Story
           </Title>
           <Body variant="body1">
-          Our mission is to protect our only planet, by creating eco-friendly plastic from banana crop waste.
-It's not just a bag; it's a promise to nurture our planet.
- Every use is a step towards a cleaner, greener future. Together, let's make a difference.
- 
-            <br /> 🌿<b>#EcoThaili #BeatPlasticWithUs</b> 
+            Our mission is to protect our only planet, by creating eco-friendly
+            plastic from banana crop waste. It's not just a bag; it's a promise
+            to nurture our planet. Every use is a step towards a cleaner,
+            greener future. Together, let's make a difference.
+            <br /> 🌿<b>#EcoThaili #BeatPlasticWithUs</b>
           </Body>
         </Grid>
       </Grid>

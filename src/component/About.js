@@ -13,11 +13,11 @@ const StyledContainer = styled(Container)({
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-end",
-  '@media (min-width:600px)': {
+  "@media (min-width:600px)": {
     padding: "0",
     height: "auto",
-    width:"100%",
-    textAlign: "center"
+    width: "100%",
+    textAlign: "center",
   },
 });
 
@@ -27,7 +27,7 @@ const Title = styled(Typography)({
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)",
   margin: "1rem 0",
-  '@media (min-width:600px)': {
+  "@media (min-width:600px)": {
     margin: "3rem 0",
   },
 });
@@ -43,10 +43,10 @@ const Body = styled(Typography)({
   // }
 });
 
-const StyledImage = styled('img')({
-  width: '100%',
-  height: 'auto',
-  marginBottom:'-.4rem' // To hide the small space below the image
+const StyledImage = styled("img")({
+  width: "100%",
+  height: "auto",
+  marginBottom: "-.4rem", // To hide the small space below the image
 });
 
 export default function OurStory() {
@@ -58,7 +58,8 @@ export default function OurStory() {
             About Our Team
           </Title>
           <Body variant="body1">
-            <StyledImage src={ourTeam} alt=" We Inventrix " /> {/* Use StyledImage here */}
+            <StyledImage src={ourTeam} alt=" We Inventrix " />{" "}
+            {/* Use StyledImage here */}
           </Body>
         </Grid>
       </Grid>

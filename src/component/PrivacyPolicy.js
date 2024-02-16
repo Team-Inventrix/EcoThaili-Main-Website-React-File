@@ -123,61 +123,97 @@ export default function PrivacyPolicy() {
 
             <Heading> HOW DO WE USE YOUR PERSONAL INFORMATION? </Heading>
             <Description>
-            We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations). Additionally, we use this Order Information to:
+              We use the Order Information that we collect generally to fulfill
+              any orders placed through the Site (including processing your
+              payment information, arranging for shipping, and providing you
+              with invoices and/or order confirmations). Additionally, we use
+              this Order Information to:
             </Description>
 
             <Description>
               <SubUL>
                 <li>Communicate with you;</li>
                 <li>Screen our orders for potential risk or fraud; and</li>
-                <li>When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.</li>
-                <li>We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize our Site (for example, by generating analytics about how our customers browse and interact with the Site, and to assess the success of our marketing and advertising campaigns).</li>
+                <li>
+                  When in line with the preferences you have shared with us,
+                  provide you with information or advertising relating to our
+                  products or services.
+                </li>
+                <li>
+                  We use the Device Information that we collect to help us
+                  screen for potential risk and fraud (in particular, your IP
+                  address), and more generally to improve and optimize our Site
+                  (for example, by generating analytics about how our customers
+                  browse and interact with the Site, and to assess the success
+                  of our marketing and advertising campaigns).
+                </li>
               </SubUL>
             </Description>
 
             <Heading> SHARING YOUR PERSONAL INFORMATION </Heading>
             <Description>
-            We value your privacy and are committed to protecting your personal information. We do not share any of your personal information with any IT company. We have implemented measures to ensure that your data is secure and used only for the purposes you have consented to.
+              We value your privacy and are committed to protecting your
+              personal information. We do not share any of your personal
+              information with any IT company. We have implemented measures to
+              ensure that your data is secure and used only for the purposes you
+              have consented to.
             </Description>
 
             <Description>
-            Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant, or other lawful request for information we receive, or to otherwise protect our rights.
+              Finally, we may also share your Personal Information to comply
+              with applicable laws and regulations, to respond to a subpoena,
+              search warrant, or other lawful request for information we
+              receive, or to otherwise protect our rights.
             </Description>
 
             <Heading> DO NOT TRACK </Heading>
             <Description>
-            Please note that we do not alter our Site's data collection and use practices when we see a Do Not Track signal from your browser.
+              Please note that we do not alter our Site's data collection and
+              use practices when we see a Do Not Track signal from your browser.
             </Description>
 
-            <Heading>
-            YOUR RIGHTS
-            </Heading>
+            <Heading>YOUR RIGHTS</Heading>
             <Description>
-            If you are a European resident, you have the right to access the personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the contact information below.
+              If you are a European resident, you have the right to access the
+              personal information we hold about you and to ask that your
+              personal information be corrected, updated, or deleted. If you
+              would like to exercise this right, please contact us through the
+              contact information below.
             </Description>
 
             <Description>
-            Additionally, if you are a European resident we note that we are processing your information in order to fulfill contracts we might have with you (for example if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above. Additionally, please note that your information will be transferred outside of Europe, including to Canada and the United States.
+              Additionally, if you are a European resident we note that we are
+              processing your information in order to fulfill contracts we might
+              have with you (for example if you make an order through the Site),
+              or otherwise to pursue our legitimate business interests listed
+              above. Additionally, please note that your information will be
+              transferred outside of Europe, including to Canada and the United
+              States.
             </Description>
 
             <Heading>DATA RETENTION</Heading>
             <Description>
-            When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information.
+              When you place an order through the Site, we will maintain your
+              Order Information for our records unless and until you ask us to
+              delete this information.
             </Description>
 
             <Heading>CHANGES</Heading>
             <Description>
-            We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.
+              We may update this privacy policy from time to time in order to
+              reflect, for example, changes to our practices or for other
+              operational, legal or regulatory reasons.
             </Description>
 
             <Heading>CONTACT US</Heading>
             <Description>
-            For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at [team-inventrix@gmail.com] or by mail using the details provided below:
+              For more information about our privacy practices, if you have
+              questions, or if you would like to make a complaint, please
+              contact us by e-mail at [team-inventrix@gmail.com] or by mail
+              using the details provided below:
             </Description>
 
-            <Description>
-            ASCOL Lainchowr,Kathmandu
-            </Description>
+            <Description>ASCOL Lainchowr,Kathmandu</Description>
           </Body>
         </Grid>
       </Grid>

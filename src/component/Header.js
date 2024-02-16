@@ -28,27 +28,26 @@ function Header() {
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     const offset = 128;
-    if (globalThis.location.pathname === '/') {
-      if (sectionId === '') {
-        globalThis.location.href = '/';
+    if (globalThis.location.pathname === "/") {
+      if (sectionId === "") {
+        globalThis.location.href = "/";
       } else if (sectionElement) {
         const targetScroll = sectionElement.offsetTop - offset;
-        sectionElement.scrollIntoView({ behavior: "smooth" });
+        sectionElement.scrollIntoView({ behavior: "auto" });
         globalThis.scrollTo({
           top: targetScroll,
-          behavior: "smooth",
+          behavior: "auto",
         });
         setOpen(false);
       }
     } else {
-      if (sectionId === ' ') {
-        globalThis.location.href = '/';
+      if (sectionId === " ") {
+        globalThis.location.href = "/";
       } else {
-        globalThis.location.href = '/#' + sectionId;
+        globalThis.location.href = "/#" + sectionId;
       }
     }
   };
-  
 
   return (
     <div>
@@ -62,9 +61,14 @@ function Header() {
           width: "100%",
         }}
       >
-        <Container maxWidth="lg" sx={{
-          // zIndex: '5'
-        }}>
+        <Container
+          maxWidth="lg"
+          sx={
+            {
+              // zIndex: '5'
+            }
+          }
+        >
           <Toolbar
             variant="regular"
             sx={(theme) => ({
@@ -97,7 +101,12 @@ function Header() {
                 px: 0,
               }}
             >
-              <img src={LogoImg} style={logoStyle} alt="EcoThaili" onClick={() => scrollToSection("ms")} />
+              <img
+                src={LogoImg}
+                style={logoStyle}
+                alt="EcoThaili"
+                onClick={() => scrollToSection("ms")}
+              />
               <Box
                 sx={{ display: { xs: "none", md: "flex", margin: "100px" } }}
               >
@@ -105,7 +114,12 @@ function Header() {
                   onClick={() => scrollToSection("os")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
+                  <Typography
+                    variant="body2"
+                    color="#2B2B60"
+                    fontWeight="600"
+                    fontSize="clamp(.8rem, 1vw, 1rem)"
+                  >
                     Our Story
                   </Typography>
                 </MenuItem>
@@ -113,7 +127,12 @@ function Header() {
                   onClick={() => scrollToSection("pwas")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
+                  <Typography
+                    variant="body2"
+                    color="#2B2B60"
+                    fontWeight="600"
+                    fontSize="clamp(.8rem, 1vw, 1rem)"
+                  >
                     Problem We are Solving
                   </Typography>
                 </MenuItem>
@@ -121,7 +140,12 @@ function Header() {
                   onClick={() => scrollToSection("mc")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
+                  <Typography
+                    variant="body2"
+                    color="#2B2B60"
+                    fontWeight="600"
+                    fontSize="clamp(.8rem, 1vw, 1rem)"
+                  >
                     Material Composition
                   </Typography>
                 </MenuItem>
@@ -129,7 +153,12 @@ function Header() {
                   onClick={() => scrollToSection("oi")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
+                  <Typography
+                    variant="body2"
+                    color="#2B2B60"
+                    fontWeight="600"
+                    fontSize="clamp(.8rem, 1vw, 1rem)"
+                  >
                     Our Impact
                   </Typography>
                 </MenuItem>
@@ -137,7 +166,12 @@ function Header() {
                   onClick={() => scrollToSection("p")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
+                  <Typography
+                    variant="body2"
+                    color="#2B2B60"
+                    fontWeight="600"
+                    fontSize="clamp(.8rem, 1vw, 1rem)"
+                  >
                     Product
                   </Typography>
                 </MenuItem>
@@ -145,7 +179,12 @@ function Header() {
                   onClick={() => scrollToSection("faq")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
+                  <Typography
+                    variant="body2"
+                    color="#2B2B60"
+                    fontWeight="600"
+                    fontSize="clamp(.8rem, 1vw, 1rem)"
+                  >
                     FAQ
                   </Typography>
                 </MenuItem>
@@ -153,7 +192,12 @@ function Header() {
                   onClick={() => scrollToSection("a")}
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
+                  <Typography
+                    variant="body2"
+                    color="#2B2B60"
+                    fontWeight="600"
+                    fontSize="clamp(.8rem, 1vw, 1rem)"
+                  >
                     About
                   </Typography>
                 </MenuItem>

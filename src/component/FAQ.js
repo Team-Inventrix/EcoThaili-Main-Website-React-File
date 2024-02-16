@@ -33,7 +33,7 @@ const Title = styled(Typography)({
 });
 
 const StyleAccordion = styled(Accordion)({
-  background:"#f2f2f7e0"
+  background: "#f2f2f7e0",
 });
 
 const Body = styled(Typography)({
@@ -45,8 +45,6 @@ const Body = styled(Typography)({
     textAlign: "left",
   },
 });
-
-
 
 const Question = styled(Typography)({
   color: "#2B2B60",
@@ -96,9 +94,7 @@ export default function FAQ() {
                 aria-controls="panel1d-content"
                 id="panel1d-header"
               >
-                <Question>
-                  Where do EcoThaili products come from ?
-                </Question>
+                <Question>Where do EcoThaili products come from ?</Question>
               </AccordionSummary>
               <AccordionDetails>
                 <Answer>
@@ -123,8 +119,7 @@ export default function FAQ() {
                 </Question>
               </AccordionSummary>
               <AccordionDetails>
-                <Answer
-                >
+                <Answer>
                   No, the banana fiber used in EcoThaili products comes from the
                   pseudostems of banana trees. These pseudostems are a byproduct
                   of banana cultivation, providing a sustainable source for our
@@ -146,8 +141,7 @@ export default function FAQ() {
                 </Question>
               </AccordionSummary>
               <AccordionDetails>
-                <Answer
-                >
+                <Answer>
                   Yes, EcoThaili bags are designed to be sturdy and durable.
                   They can easily hold heavy items without tearing, providing
                   both strength and reliability.
@@ -189,9 +183,7 @@ export default function FAQ() {
                 aria-controls="panel4d-content"
                 id="panel4d-header"
               >
-                <Question>
-                  Are these bags safe for food storage ?
-                </Question>
+                <Question>Are these bags safe for food storage ?</Question>
               </AccordionSummary>
               <AccordionDetails>
                 <Answer

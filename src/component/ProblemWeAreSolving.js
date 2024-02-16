@@ -53,7 +53,6 @@ const ProblemContainer = styled(Box)({
   borderRadius: "1rem",
   borderTop: "1.5px solid #1D2064",
   boxShadow: "0 4px 6px #0f166899",
-  
 });
 
 const ProblemDescription = styled(Box)({
@@ -62,11 +61,11 @@ const ProblemDescription = styled(Box)({
     width: "60%",
   },
   "@media (max-width:600px)": {
-    "&:nth-child(odd)":{
-      order: "2"
+    "&:nth-child(odd)": {
+      order: "2",
     },
-    "&:nth-child(even)":{
-      order: "2"
+    "&:nth-child(even)": {
+      order: "2",
     },
   },
 });
@@ -91,11 +90,11 @@ const ProblemImage = styled("img")({
     width: "30%",
   },
   "@media (max-width:600px)": {
-    "&:nth-child(odd)":{
-      order: "1"
+    "&:nth-child(odd)": {
+      order: "1",
     },
-    "&:nth-child(even)":{
-      order: "1"
+    "&:nth-child(even)": {
+      order: "1",
     },
   },
 });
@@ -109,7 +108,6 @@ export default function ProblemWeAreSolving() {
             Problem We are Solving
           </Title>
           <ProblemBoard>
-            
             <ProblemContainer>
               <ProblemDescription>
                 <ProblemData>20 %</ProblemData>
@@ -169,7 +167,6 @@ export default function ProblemWeAreSolving() {
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
-
           </ProblemBoard>
         </Grid>
       </Grid>

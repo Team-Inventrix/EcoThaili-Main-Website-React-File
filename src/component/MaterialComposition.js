@@ -31,7 +31,7 @@ const Title = styled(Typography)({
 const Body = styled(Typography)({
   color: "#2B2B60",
   textAlign: "justify",
-  
+
   "@media (min-width:600px)": {
     textAlign: "center",
   },
@@ -45,7 +45,7 @@ const ImageContainer = styled("figure")({
   gap: "1rem",
   margin: "5rem auto",
   "@media (min-width:600px)": {
-    maxWidth:"1050px"
+    maxWidth: "1050px",
   },
 });
 
@@ -60,7 +60,7 @@ const StyledImage = styled("img")({
 const ImageName = styled(Typography)({
   fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
   lineHeight: "1.5",
-})
+});
 
 export default function OurStory() {
   return (
