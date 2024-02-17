@@ -4,7 +4,6 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import ManufacturingProcessChart from "../image/designedImages/manufacturing.png";
-import MaterialCompositionChart from "../image/designedImages/composition.png";
 
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",

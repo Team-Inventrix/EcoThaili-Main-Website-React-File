@@ -3,7 +3,6 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
-import ManufacturingProcessChart from "../image/designedImages/manufacturing.png";
 import MaterialCompositionChart from "../image/designedImages/composition.png";
 
 const StyledContainer = styled(Container)({
@@ -44,9 +43,8 @@ const StyledImage = styled("img")({
   height:"auto",
   width:"100%",
   "@media (min-width:600px)": {
-    height: "50vh",
-    width: "auto",
-
+    height: "auto",
+    width: "100%",
   },
   // background: "#EFEEEF",
   // border: "2px solid red",
