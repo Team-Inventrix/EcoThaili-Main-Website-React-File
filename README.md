@@ -86,15 +86,15 @@ Make sure you have the following installed on your machine:
 
    - Run the following command:
      ```
-     git clone https://github.com/Team-Inventrix/Team-Inventrix-Main-Website-React-File.git
+     git clone https://github.com/Team-Inventrix/EcoThaili-Main-Website-React-File.git
      ```
-     Here `https://github.com/Team-Inventrix/Team-Inventrix-Main-Website-React-File.git` is the URL of the GitHub repository from where we will be cloning the project to our local machine.
+     Here `https://github.com/Team-Inventrix/EcoThaili-Main-Website-React-File.git` is the URL of the GitHub repository from where we will be cloning the project to our local machine.
 
 2. **Install Project Dependencies**:
 
    - After the cloning is completed! you will get a file and you have to navigate into that project directory:
      ```
-     cd team-inventrix-main-website
+     cd EcoThaili-Main-Website-React-File
      ```
    - Run the following command to install project dependencies specified in `package.json`:
      ```
@@ -123,6 +123,11 @@ Make sure you have the following installed on your machine:
      ```
      npm install react-swipeable-views-react-18
      npm install --save react-swipeable-views-utils
+     ```
+6. **To get Vercel Real Experience Score**
+   - use vercel inbuilt UI
+     ```
+     npm i @vercel/speed-insights
      ```
 
 6. **Run the Application**:
@@ -159,7 +164,7 @@ Make sure you have the following installed on your machine:
 11. **Initial commit to the GitHub** (Begineer's Step) :
     - If you are trying to push your change for the first time then run the command:
       ```
-      git remote add origin https://github.com/Team-Inventrix/Team-Inventrix-Main-Website-React-File.git
+      git remote add origin https://github.com/Team-Inventrix/EcoThaili-Main-Website-React-File.git
       ```
     - Since this is your first time push to this repository you need to setup your username and email, so to do that follow
 
