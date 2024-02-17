@@ -41,7 +41,7 @@ const Title = styled(Typography)({
 const Body = styled(Typography)({
   color: "#EFEEEF",
   textAlign: "justify",
-  fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
+  fontSize: "clamp(1rem, 2vw, 1.5rem)",
   lineHeight: "1.7",
   "@media (min-width:600px)": {
     textAlign: "center",

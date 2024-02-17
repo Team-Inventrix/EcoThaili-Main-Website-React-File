@@ -33,16 +33,16 @@ const Title = styled(Typography)({
   textAlign: "center",
   fontWeight: 700,
   fontSize: "clamp(2rem, 3vw, 3rem)",
-  margin: "0 0 3rem 0",
-  position: "relative", // Add this line
+  margin: "0 0 5vw 0",
+  position: "relative",
   "&::after": {
-    content: '""', // Add this line
-    display: "block", // Add this line
-    margin: "0 auto", // Center the bar
-    minWidth: "50%", // Adjust as needed
+    content: '""',
+    display: "block",
+    margin: "0 auto",
+    minWidth: "50%",
     maxWidth: "70%",
-    paddingTop: "0.5rem", // Space from the text
-    borderBottom: ".5px solid #EFEEEF", // Add this line
+    paddingTop: "0.5rem",
+    borderBottom: ".5px solid #EFEEEF",
   },
 });
 
@@ -54,6 +54,7 @@ const ImpactBoard = styled(Box)({
   alignItems: "center",
   gap: "4rem",
   width: "80vw",
+  // border:"2px solid red",
   "@media (min-width:600px)": {
     height: "max-content",
   },
@@ -62,16 +63,16 @@ const ImpactBoard = styled(Box)({
 const ImpactContainer = styled(Box)({
   display: "flex",
   height: "auto",
-  width: "calc(50% - 2rem)",
   flexDirection: "column",
+  justifyContent: "space-evenly",
   alignItems: "center",
-  gap: "1rem",
+  gap: ".5rem",
   padding: "1rem",
   background: "#cfcfedd6",
   borderRadius: "1rem",
-  boxShadow: "0 4px 6px #0f166899",
+  boxShadow: "0 4px 6px 3px #05140199",
   "@media (min-width:600px)": {
-    width: "15%",
+    gap: "1rem",
   },
 });
 
@@ -82,10 +83,11 @@ const ImapctIcon = styled("img")({
 });
 
 const ImpactName = styled(Typography)({
-  // background: "#2B2B60",
   fontWeight: "600",
-  fontSize: "clamp(.6rem, 2vw, 1rem)",
+  fontSize: "clamp(1rem, 2vw, 1.3rem)",
   color: "#2B2B60",
+  textAlign:"center",
+  marginTop: "1em",
 });
 
 export default function ProblemWeAreSolving() {
@@ -96,18 +98,27 @@ export default function ProblemWeAreSolving() {
           <Title component="h2" variant="h4">
             Environmental Impact
           </Title>
-          <ImpactBoard>
-            <ImpactContainer>
+          <ImpactBoard sx={{ width: { sm: "90vw" }, gap: { sm: "3.33vw", xs: "5vw" } }}>
+            <ImpactContainer sx={{
+                height: { sm: "27vh", md: "100%" },
+                width: { md: "20vw", sm: "27.6vw", xs: "95vw" },
+              }}>
               <ImapctIcon alt="Green House Outline Icon" src={GreenHouseIcon} />
               <ImpactName>80% Less Green House Emission</ImpactName>
             </ImpactContainer>
 
-            <ImpactContainer>
+            <ImpactContainer sx={{
+                height: { sm: "27vh", md: "100%" },
+                width: { md: "20vw", sm: "27.6vw", xs: "95vw" },
+              }}>
               <ImapctIcon alt="Upcycle Outline Icon" src={UpCycleIcon} />
               <ImpactName>Massive Banana Waste Upcycle</ImpactName>
             </ImpactContainer>
 
-            <ImpactContainer>
+            <ImpactContainer sx={{
+                height: { sm: "27vh", md: "100%" },
+                width: { md: "20vw", sm: "27.6vw", xs: "95vw" },
+              }}>
               <ImapctIcon
                 alt="Chemical Waste Outline Icon"
                 src={ChemicalWasteIcon}
@@ -123,8 +134,11 @@ export default function ProblemWeAreSolving() {
           <Title component="h2" variant="h4">
             Community Impact
           </Title>
-          <ImpactBoard>
-            <ImpactContainer>
+          <ImpactBoard sx={{ width: { sm: "90vw" }, gap: { sm: "3.33vw", xs: "5vw" } }}>
+            <ImpactContainer sx={{
+                height: { sm: "27vh", md: "100%" },
+                width: { md: "20vw", sm: "27.6vw", xs: "95vw" },
+              }}>
               <ImapctIcon
                 alt="Sustainable City Outline Icon"
                 src={SustainableCityIcon}
@@ -132,12 +146,18 @@ export default function ProblemWeAreSolving() {
               <ImpactName>Helps In Creating Sustainable Cities</ImpactName>
             </ImpactContainer>
 
-            <ImpactContainer>
+            <ImpactContainer sx={{
+                height: { sm: "27vh", md: "100%" },
+                width: { md: "20vw", sm: "27.6vw", xs: "95vw" },
+              }}>
               <ImapctIcon alt="Low Energy Outline Icon" src={LowEnergyIcon} />
               <ImpactName>Low Energy Consumption</ImpactName>
             </ImpactContainer>
 
-            <ImpactContainer>
+            <ImpactContainer sx={{
+                height: { sm: "27vh", md: "100%" },
+                width: { md: "20vw", sm: "27.6vw", xs: "95vw" },
+              }}>
               <ImapctIcon
                 alt="Zero Value Waste Outline Icon"
                 src={ZeroValueWasteIcon}

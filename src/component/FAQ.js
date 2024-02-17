@@ -11,15 +11,13 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",
-  minheight: "100vh",
   width: "100%",
   background: "#226a49",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  // zIndex:"-1",
   "@media (min-width:600px)": {
-    padding: "10rem",
+    padding: "10rem 5vw",
     textAlign: "center",
   },
 });
@@ -28,8 +26,8 @@ const Title = styled(Typography)({
   color: "#EFEEEF",
   textAlign: "center",
   fontWeight: 700,
-  fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
-  margin: "0 0 3rem 0",
+  fontSize: "clamp(2rem, 4vw, 4rem)",
+  margin: "0 0 5vw 0",
 });
 
 const StyleAccordion = styled(Accordion)({
@@ -39,7 +37,7 @@ const StyleAccordion = styled(Accordion)({
 const Body = styled(Typography)({
   color: "#EFEEEF",
   textAlign: "left",
-  fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
+  fontSize: "clamp(1rem, 2vw, 1.5rem)",
   lineHeight: "1.5",
   "@media (min-width:600px)": {
     textAlign: "left",
@@ -50,7 +48,7 @@ const Question = styled(Typography)({
   color: "#2B2B60",
   textAlign: "left",
   fontWeight: "600",
-  fontSize: "clamp(1rem, 2vw, 1.3rem)", // And here
+  fontSize: "clamp(1rem, 2vw, 1.3rem)",
   lineHeight: "1.5",
   "@media (min-width:600px)": {
     textAlign: "left",
@@ -61,7 +59,7 @@ const Answer = styled(Typography)({
   color: "#2B2B60",
   textAlign: "left",
   fontWeight: "400",
-  fontSize: "clamp(1rem, 2vw, 1.2rem)", // And here
+  fontSize: "clamp(1rem, 2vw, 1.2rem)",
   lineHeight: "1.5",
   margin: "0 .5rem ",
   "@media (min-width:600px)": {
@@ -78,13 +76,17 @@ export default function FAQ() {
   };
 
   return (
-    <StyledContainer id="faq" maxWidth={false}>
+    <StyledContainer
+      id="faq"
+      maxWidth={false}
+      sx={{ minHeight: { sm: "100%", md: "100vh" } }}
+    >
       <Grid container spacing={6}>
         <Grid item xs={12} md={12}>
           <Title component="h2" variant="h4">
             Frequently asked questions
           </Title>
-          <Body>
+          <Body sx={{ width: { sm: "90vw" } }}>
             <StyleAccordion
               expanded={expanded === "panel1"}
               onChange={handleChange("panel1")}

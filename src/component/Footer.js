@@ -30,7 +30,7 @@ const StyledContainer = styled(Container)({
   width: "100%",
   "@media (min-width:600px)": {
     gap: "0.5rem",
-    padding: "5rem 5rem .7rem 5rem",
+    padding: "2.5vw 5vw",
     textAlign: "left",
   },
 });
@@ -58,10 +58,15 @@ const LogoSide = styled(Box)({
 const LowerFooter = styled(Box)({
   display: "flex",
   justifyContent: "space-between",
+  flexDirection:"column",
+  alignItems: "center",
   paddingTop: "1rem",
   marginTop: "1rem",
   width: "100%",
   borderTop: "1px solid #226a49",
+  "@media (min-width:600px)": {
+    flexDirection:"row",
+  },
 });
 
 const FooterTitle = styled(Typography)({
@@ -94,7 +99,7 @@ const FooterLink = styled(Link)({
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary" mt={1}>
+    <Typography variant="body2" color="text.secondary" sx={{order:{xs:"3", sm:"3"}}}>
       <FooterBody>
         {"© " +
           new Date().getFullYear() +
@@ -237,6 +242,7 @@ export default function Footer() {
           useFlexGap
           sx={{
             color: "text.secondary",
+            order:{xs:"1",sm:"1"}
           }}
         >
           <IconButton
@@ -280,9 +286,9 @@ export default function Footer() {
           </IconButton>
         </Stack>
 
-        <Copyright />
+        <Copyright/>
         
-        <div>
+        <Box sx={{order:{xs:"2", sm:"2"}}}>
           <FooterLink color="text.secondary" href="/privacy">
             Privacy Policy
           </FooterLink>
@@ -292,13 +298,7 @@ export default function Footer() {
           <FooterLink color="text.secondary" href="/terms">
             Terms of Service
           </FooterLink>
-        </div>
-
-        {/* <ScrollLink to="os" smooth={true} duration={2000}>
-          <Typography variant="body2" sx={footerLinkStyle}>
-            Back to Top
-          </Typography>
-        </ScrollLink> */}
+        </Box>
       </LowerFooter>
     </StyledContainer>
   );

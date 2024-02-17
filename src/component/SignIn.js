@@ -8,11 +8,11 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "./Header";
+import { styled } from "@mui/system";
 
 function Copyright(props) {
   return (
@@ -32,9 +32,29 @@ function Copyright(props) {
   );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
+const StyledContainer = styled(Container)({
+  padding: "5rem 1.5rem",
+  height: "100%",
+  width: "100%",
+  // background: "#226a49",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  zIndex: "2",
+  "@media (min-width:600px)": {
+    padding: "15vw 5vw",
+    height: "100vh",
+    textAlign: "center",
+  },
+});
 
-const defaultTheme = createTheme();
+const Title = styled(Typography)({
+  color: "#226a49",
+  textAlign: "center",
+  fontWeight: 700,
+  fontSize: "clamp(2rem, 4vw, 4rem)",
+  margin: "0 0 5vw 0",
+});
 
 export default function SignIn() {
   const handleSubmit = (event) => {
@@ -47,8 +67,7 @@ export default function SignIn() {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <Container component="main" maxWidth="xs">
+    <StyledContainer component="main" maxWidth={false} sx={{display:"flex", flexDirection:"column", justifyContent:"center",alignItems:"center", minHeight: { sm: "100%", md: "100vh" } }}>
         <Header /> <br />
         <CssBaseline />
         <Box
@@ -59,12 +78,12 @@ export default function SignIn() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-            <LockOutlinedIcon />
+          <Avatar sx={{ m: "1.5vw", bgcolor: "#226A49" }}>
+            <VpnKeyIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
+          <Title component="h1" variant="h5">
             Sign in
-          </Typography>
+          </Title>
           <Box
             component="form"
             onSubmit={handleSubmit}
@@ -118,7 +137,6 @@ export default function SignIn() {
           </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
-      </Container>
-    </ThemeProvider>
+      </StyledContainer>
   );
 }

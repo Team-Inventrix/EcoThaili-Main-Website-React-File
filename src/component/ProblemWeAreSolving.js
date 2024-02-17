@@ -4,17 +4,20 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import Box from "@mui/material/Box";
+import Problem1Image from "../image/problem/problem-1.jpg";
+import Problem2Image from "../image/problem/problem-2.jpg";
+import Problem3Image from "../image/problem/problem-3.jpg";
+import Problem4Image from "../image/problem/problem-4.jpg";
 
 const StyledContainer = styled(Container)({
-  padding: "5rem 1.5rem",
+  padding: "5rem 0",
   minHeight: "100vh",
   width: "100%",
-  // background: "#EFEEEF",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   "@media (min-width:600px)": {
-    padding: "10rem",
+    padding: "10rem 0",
     textAlign: "center",
   },
 });
@@ -23,8 +26,8 @@ const Title = styled(Typography)({
   color: "#226A49",
   textAlign: "center",
   fontWeight: 700,
-  fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
-  margin: "0 0 3rem 0",
+  fontSize: "clamp(2rem, 4vw, 4rem)",
+  margin: "0 0 5vw 0",
 });
 
 const ProblemBoard = styled(Typography)({
@@ -32,9 +35,9 @@ const ProblemBoard = styled(Typography)({
   textAlign: "justify",
   display: "flex",
   flexDirection: "column",
-  fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
+  fontSize: "clamp(1rem, 2vw, 1.5rem)",
   lineHeight: "1.5",
-  gap: "6rem",
+  gap: "5vw",
   "@media (min-width:600px)": {
     textAlign: "center",
   },
@@ -43,13 +46,12 @@ const ProblemBoard = styled(Typography)({
 const ProblemContainer = styled(Box)({
   display: "flex",
   height: "auto",
-  width: "100%",
+  margin: "auto",
   flexWrap: "wrap",
   alignItems: "center",
   justifyContent: "space-between",
-  gap: "1rem",
+  gap: "5vw",
   padding: "1rem",
-  // background: "#cfcfed45",
   borderRadius: "1rem",
   borderTop: "1.5px solid #1D2064",
   boxShadow: "0 4px 6px #0f166899",
@@ -58,7 +60,7 @@ const ProblemContainer = styled(Box)({
 const ProblemDescription = styled(Box)({
   width: "100%",
   "@media (min-width:600px)": {
-    width: "60%",
+    width: "50vw",
   },
   "@media (max-width:600px)": {
     "&:nth-child(odd)": {
@@ -71,12 +73,13 @@ const ProblemDescription = styled(Box)({
 });
 
 const ProblemData = styled(Typography)({
-  fontSize: "clamp(3rem, 2vw, 8.5rem)",
+  fontSize: "clamp(3rem, 6vw, 8.5rem)",
   fontWeight: "bolder",
   textAlign: "center",
 });
 const ProblemBodyText = styled(Typography)({
-  fontSize: "clamp(1rem, 2vw, 1.5rem)",
+  fontSize: "clamp(1.4rem, 1vw, 3rem)",
+  textAlign: "justify",
   color: "#226A49",
   lineHeight: "1.7",
   opacity: ".8",
@@ -85,7 +88,7 @@ const ProblemBodyText = styled(Typography)({
 const ProblemImage = styled("img")({
   width: "100%",
   aspectRatio: "5/4",
-  objectFit: "contain",
+  objectFit: "fill",
   "@media (min-width:600px)": {
     width: "30%",
   },
@@ -108,62 +111,54 @@ export default function ProblemWeAreSolving() {
             Problem We are Solving
           </Title>
           <ProblemBoard>
-            <ProblemContainer>
+            <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemDescription>
                 <ProblemData>20 %</ProblemData>
                 <ProblemBodyText>
-                  BioThaili, our eco-friendly plastic, is a story of change.
-                  Made from banana fibers, it's more than just a bag – it's a
-                  promise to be
+                Every year, Nepal generates a staggering amount of plastic waste, contributing to environmental degradation and threatening biodiversity. Our mission is to combat this issue by transforming banana crop waste into eco-friendly plastic solutions.
                 </ProblemBodyText>
               </ProblemDescription>
               <ProblemImage
                 alt="problem 1"
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src={Problem1Image}
               />
             </ProblemContainer>
 
-            <ProblemContainer>
+            <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemImage
                 alt="problem 2"
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src={Problem2Image}
               />
               <ProblemDescription>
-                <ProblemData>40 %</ProblemData>
+                <ProblemData>80 %</ProblemData>
                 <ProblemBodyText>
-                  BioThaili, our eco-friendly plastic, is a story of change.
-                  Made from banana fibers, it's more than just a bag – it's a
-                  promise to be
+                By utilizing EcoThaili, we aim to significantly reduce greenhouse gas emissions, diverting banana crop waste from landfills and providing a sustainable alternative to traditional plastic.
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
 
-            <ProblemContainer>
+            <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemDescription>
-                <ProblemData>80 %</ProblemData>
+                <ProblemData>30 %</ProblemData>
                 <ProblemBodyText>
-                  BioThaili, our eco-friendly plastic, is a story of change.
-                  Made from banana fibers, it's more than just a bag – it's a
-                  promise to be
+                Our initiative not only benefits the environment but also empowers local communities by creating jobs and fostering economic growth. By supporting EcoThaili, you're contributing to the development of sustainable cities and livelihoods.
                 </ProblemBodyText>
               </ProblemDescription>
               <ProblemImage
                 alt="problem 3"
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                src={Problem3Image}
               />
             </ProblemContainer>
 
-            <ProblemContainer>
+            <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemImage
-                alt="problem 2"
-                src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                alt="problem 4"
+                src={Problem4Image}
               />
               <ProblemDescription>
-                <ProblemData>40 %</ProblemData>
+                <ProblemData>50 %</ProblemData>
                 <ProblemBodyText>
-                  BioThaili, our eco-friendly plastic, is a story of change.
-                  Made from banana fibers, it's more than just a bag – it's a
-                  promise to be
+                Through widespread adoption of EcoThaili, we aim to disrupt the plastic industry's reliance on imports, promoting self-sufficiency and boosting the local economy. Join us in reshaping the market landscape with sustainable alternatives.
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
