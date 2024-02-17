@@ -14,7 +14,6 @@ const StyledContainer = styled(Container)({
   alignItems: "center",
   '@media (min-width:600px)': {
     padding: "0",
-    // height: "auto",
     width:"100%",
     textAlign: "center"
   },
@@ -43,14 +42,9 @@ const SubTitle = styled(Typography)({
   });
 
 const Body = styled(Typography)({
-//   Use this when text is added
   color: "#2B2B60",
-//   textAlign: "justify",
   fontSize: "clamp(1rem, 2vw, 1.5rem)",
   lineHeight: "1.5",
-  '@media (min-width:600px)': {
-    // textAlign: "center"
-  }
 });
 
 const HasTags = styled(Typography)({
@@ -64,7 +58,7 @@ const HasTags = styled(Typography)({
 const StyledImage = styled('img')({
   width: '100%',
   height: 'auto',
-  marginBottom:'-.4rem' // To hide the small space below the image
+  marginBottom:'-.4rem'
 });
 
 export default function ContactUs() {

@@ -24,14 +24,14 @@ const Title = styled(Typography)({
   color: "#2B2B60",
   textAlign: "center",
   fontWeight: 700,
-  fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
+  fontSize: "clamp(2rem, 4vw, 4rem)",
   margin: "3rem 0",
 });
 
 const Body = styled(Typography)({
   color: "#2B2B60",
   textAlign: "justify",
-  fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
+  fontSize: "clamp(1rem, 2vw, 1.5rem)",
   lineHeight: "1.7",
   "@media (min-width:600px)": {
     textAlign: "left",
@@ -46,7 +46,6 @@ const Heading = styled(Typography)({
 
 const SubHeading = styled(Typography)({
   fontSize: "clamp(1.3rem, 2vw, 2rem)",
-  //   margin: "0 0 0 1rem",
   fontWeight: "bold",
   "@media (min-width:600px)": {
     margin: "2rem 0 2rem 1rem",

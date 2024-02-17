@@ -8,12 +8,11 @@ import ManufacturingProcessChart from "../image/designedImages/manufacturing.png
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",
   width: "100%",
-  // background: "#226a49",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   "@media (min-width:600px)": {
-    padding: "5rem 15rem 9rem 15rem",
+    padding: "5vw 5vw",
     textAlign: "center",
     minHeight: "100vh",
   },
@@ -24,10 +23,7 @@ const Title = styled(Typography)({
   textAlign: "center",
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
-  // margin: "3rem 0",
-  "@media (min-width:600px)": {
-    marginBottom: "6rem"
-  },
+  margin: "0 0 5vw 0",
 });
 
 const Body = styled(Typography)({
@@ -58,7 +54,7 @@ const ImageName = styled(Typography)({
 
 export default function ManufacturingProcess() {
   return (
-    <StyledContainer id="mp" maxWidth={false}>
+    <StyledContainer id="mp" maxWidth={false} sx={{minHeight: { sm: "100%", md: "100vh" }}}>
       <Grid container spacing={6}>
         <Grid item xs={12} md={12}>
           <Title component="h2" variant="h4">
@@ -68,6 +64,7 @@ export default function ManufacturingProcess() {
               <StyledImage
                 alt="Manufacturing Composition"
                 src={ManufacturingProcessChart}
+                sx={{minWidth:{sm:"calc(100% )",md:"calc(100% )"}}}
               />
           </Body>
         </Grid>

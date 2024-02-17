@@ -8,14 +8,13 @@ const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",
   height: "100%",
   width: "100%",
-  // background: "#EFEEEF",
   background: "#226a49",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   zIndex: "2",
   "@media (min-width:600px)": {
-    padding: "15rem",
+    padding: "15vw 5vw",
     height: "100vh",
     textAlign: "center",
   },
@@ -26,7 +25,7 @@ const Title = styled(Typography)({
   textAlign: "center",
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
-  margin: "3rem 0",
+  margin: "0 0 5vw 0",
 });
 
 const Body = styled(Typography)({
@@ -41,7 +40,7 @@ const Body = styled(Typography)({
 
 export default function OurStory() {
   return (
-    <StyledContainer id="os" maxWidth={false}>
+    <StyledContainer id="os" maxWidth={false} sx={{height:{sm:"100%"},minHeight: { sm: "100%", md: "100vh" }}}>
       <Grid container spacing={6}>
         <Grid item xs={12} md={12}>
           <Title component="h2" variant="h4">

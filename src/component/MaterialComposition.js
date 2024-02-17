@@ -13,7 +13,7 @@ const StyledContainer = styled(Container)({
   justifyContent: "center",
   alignItems: "center",
   "@media (min-width:600px)": {
-    padding: "0 15rem",
+    padding: "5vw 5vw",
     textAlign: "center",
     minHeight: "100vh",
   },
@@ -23,11 +23,8 @@ const Title = styled(Typography)({
   color: "#EFEEEF",
   textAlign: "center",
   fontWeight: 700,
-  fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
-  margin: "3rem 0",
-  "@media (min-width:600px)": {
-    marginBottom: "6rem"
-  },
+  fontSize: "clamp(2rem, 4vw, 4rem)",
+  margin: "0 0 5vw 0",
 });
 
 const Body = styled(Typography)({
@@ -46,28 +43,26 @@ const StyledImage = styled("img")({
     height: "auto",
     width: "100%",
   },
-  // background: "#EFEEEF",
-  // border: "2px solid red",
-  // marginBottom:'-.4rem' // To hide the small space below the image
 });
 
 const ImageName = styled(Typography)({
-  fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
+  fontSize: "clamp(1rem, 2vw, 1.5rem)",
   lineHeight: "1.5",
 });
 
 export default function OurStory() {
   return (
-    <StyledContainer id="mc" maxWidth={false}>
+    <StyledContainer id="mc" maxWidth={false} sx={{minHeight: { sm: "100%", md: "100vh" }}}>
       <Grid container spacing={6}>
         <Grid item xs={12} md={12}>
           <Title component="h2" variant="h4">
             Material Composition
           </Title>
-          <Body variant="body1">
+          <Body variant="body1" >
               <StyledImage
                 alt="Material Composition"
                 src={MaterialCompositionChart}
+                sx={{minWidth:{sm:"calc(100% )",md:"calc(100% )"}}}
               />
           </Body>
         </Grid>

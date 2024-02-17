@@ -93,8 +93,6 @@ function MainSlider() {
           <div>
             <Box
               sx={{
-                // maxWidth: "100vw",
-                // minHeight: "70vh",
                 position: "relative",
               }}
               id="ms"
@@ -109,7 +107,6 @@ function MainSlider() {
                   <div
                     key={step.label}
                     style={{
-                      // aspectRatio: "16/9",
                       height: "100%",
                       overflow: "hidden",
                     }}
@@ -122,7 +119,6 @@ function MainSlider() {
                           width: "100%",
                           display: "block",
                           overflow: "hidden",
-                          // minWidth: "100%",
                           margin: "auto",
                           objectFit: "fill",
                           objectPosition: "center",
