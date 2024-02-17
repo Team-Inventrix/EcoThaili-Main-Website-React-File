@@ -51,7 +51,7 @@ const LogoSide = styled(Box)({
   gap: 4,
   minWidth: "100%",
   "@media (min-width:600px)": {
-    minWidth: "60%"
+    minWidth: "60%",
   },
 });
 
@@ -61,49 +61,73 @@ const LowerFooter = styled(Box)({
   paddingTop: "1rem",
   marginTop: "1rem",
   width: "100%",
-  borderTop: "1px solid #2B2B60",
+  borderTop: "1px solid #226a49",
 });
 
 const FooterTitle = styled(Typography)({
   fontSize: "clamp(1rem, 2vw, 1.5rem)",
   fontWeight: "600",
   marginBottom: ".5rem",
-  color:"#2B2B60",
-})
+  color: "#226a49",
+});
 
 const FooterBody = styled(Typography)({
   fontSize: "clamp(.7rem, 2vw, 1rem)",
   fontWeight: "400",
   marginBottom: ".5rem",
-  color:"#2B2B60",
+  color: "#226a49",
   opacity: ".7",
-})
+});
 
 const FooterLink = styled(Link)({
   fontSize: "clamp(.7rem, 2vw, 1rem)",
   fontWeight: "400",
   marginBottom: ".5rem",
-  color:"#2B2B60",
-  opacity: ".7",
+  color: "#226a49",
+  opacity: ".8",
+  cursor: "pointer",
   textDecoration: "none",
-  '&:hover': {
-    opacity: "1"
-  }
-})
+  "&:hover": {
+    opacity: "1",
+  },
+});
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       <FooterBody>
-      {"Copyright © "}
-      <FooterLink href="/">EcoThaili&nbsp;</FooterLink>
-      {new Date().getFullYear()}
+        {"© " +
+          new Date().getFullYear() +
+          " EcoThaili. All Rights Reserved. Website by "}
+        <FooterLink> Team Inventrix </FooterLink>
       </FooterBody>
     </Typography>
   );
 }
 
 export default function Footer() {
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    const offset = 128;
+    if (globalThis.location.pathname === "/") {
+      const targetScroll = sectionElement.offsetTop - offset;
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+      globalThis.scrollTo({
+        top: targetScroll,
+        behavior: "smooth",
+      });
+      setOpen(false);
+    } else {
+      globalThis.location.href = "/#" + sectionId;
+    }
+  };
+
   return (
     <StyledContainer maxWidth={false}>
       <UpperFooter>
@@ -112,14 +136,13 @@ export default function Footer() {
             <Box>
               <img src={Ecothaili} style={logoStyle} alt="Ecothaili" />
             </Box>
-            <FooterTitle variant="body2">
-              Newsletter
-            </FooterTitle>
+            <FooterTitle variant="body2">Newsletter</FooterTitle>
             <FooterBody>
               Subscribe to our newsletter for weekly updates and promotions.
             </FooterBody>
             <Stack direction="row" spacing={1} useFlexGap>
               <TextField
+                border="2px solid #226a49"
                 id="outlined-basic"
                 hiddenLabel
                 size="small"
@@ -130,12 +153,13 @@ export default function Footer() {
                 inputProps={{
                   autocomplete: "off",
                   ariaLabel: "Enter your email address",
+                  // style: { color: '#226A49', borderColor: '#226A49' } 
                 }}
               />
               <Button
                 variant="contained"
                 color="primary"
-                sx={{ flexShrink: 0, bgcolor:"#2B2B60" }}
+                sx={{ flexShrink: 0, bgcolor: "#226a49" }}
               >
                 Subscribe
               </Button>
@@ -149,25 +173,24 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <FooterTitle>
-            EcoThaili
-          </FooterTitle>
-          <FooterLink href="#os">
+          <FooterTitle>EcoThaili</FooterTitle>
+          <FooterLink onClick={() => scrollToSection("os")}>
             Our Story
           </FooterLink>
-          <FooterLink href="#pwas">
+          <FooterLink onClick={() => scrollToSection("pwas")}>
             Problem We are Solving
           </FooterLink>
-          <FooterLink href="#mc">
+          <FooterLink onClick={() => scrollToSection("mc")}>
             Material Composition
           </FooterLink>
-          <FooterLink href="#oi">
+          <FooterLink onClick={() => scrollToSection("mp")}>
+            Manufacturing Process
+          </FooterLink>
+          <FooterLink onClick={() => scrollToSection("oi")}>
             Our Impact
           </FooterLink>
 
-          <FooterLink href="#faq">
-            FAQs
-          </FooterLink>
+          <FooterLink onClick={() => scrollToSection("faq")}>FAQs</FooterLink>
         </Box>
         <Box
           sx={{
@@ -179,10 +202,16 @@ export default function Footer() {
           <FooterTitle variant="body2" fontWeight={600}>
             Company
           </FooterTitle>
-          <FooterLink color="text.secondary" href="#a">
+          <FooterLink
+            color="text.secondary"
+            onClick={() => scrollToSection("a")}
+          >
             About us
           </FooterLink>
           <FooterLink color="text.secondary">Careers (no page yet)</FooterLink>
+          <FooterLink color="text.secondary" href="/contact">
+            Contact
+          </FooterLink>
         </Box>
         <Box
           sx={{
@@ -191,40 +220,16 @@ export default function Footer() {
             gap: 1,
           }}
         >
-          <FooterTitle>
-            Legal
-          </FooterTitle>
-          <FooterLink color="text.secondary" href="#">
+          <FooterTitle>Legal</FooterTitle>
+          <FooterLink color="text.secondary" href="/terms">
             Terms
           </FooterLink>
-          <FooterLink color="text.secondary" href="#">
+          <FooterLink color="text.secondary" href="/privacy">
             Privacy
-          </FooterLink>
-          <FooterLink color="text.secondary" href="#">
-            Contact
           </FooterLink>
         </Box>
       </UpperFooter>
       <LowerFooter>
-        <div>
-          <FooterLink color="text.secondary" href="#">
-            Privacy Policy
-          </FooterLink>
-          <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
-            &nbsp;•&nbsp;
-          </Typography>
-          <FooterLink color="text.secondary" href="#">
-            Terms of Service
-          </FooterLink>
-        </div>
-
-        <Copyright />
-        {/* <ScrollLink to="os" smooth={true} duration={2000}>
-          <Typography variant="body2" sx={footerLinkStyle}>
-            Back to Top
-          </Typography>
-        </ScrollLink> */}
-
         <Stack
           direction="row"
           justifyContent="left"
@@ -235,7 +240,7 @@ export default function Footer() {
           }}
         >
           <IconButton
-            color="inherit"
+            color="#226a49"
             target="_blank"
             href="https://github.com/Team-Inventrix"
             aria-label="GitHub"
@@ -245,7 +250,7 @@ export default function Footer() {
           </IconButton>
 
           <IconButton
-            color="inherit"
+            color="#226a49"
             target="_blank"
             href="https://www.linkedin.com/in/team-inventrix-9a35712b0/"
             aria-label="LinkedIn"
@@ -255,7 +260,7 @@ export default function Footer() {
           </IconButton>
 
           <IconButton
-            color="inherit"
+            color="#226a49"
             target="_blank"
             href="https://www.youtube.com/@team-inventrix"
             aria-label="YouTube"
@@ -265,7 +270,7 @@ export default function Footer() {
           </IconButton>
 
           <IconButton
-            color="inherit"
+            color="#226a49"
             target="_blank"
             href="https://www.facebook.com/profile.php?id=61555879292763"
             aria-label="Facebook"
@@ -274,6 +279,26 @@ export default function Footer() {
             <FacebookIcon />
           </IconButton>
         </Stack>
+
+        <Copyright />
+        
+        <div>
+          <FooterLink color="text.secondary" href="/privacy">
+            Privacy Policy
+          </FooterLink>
+          <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
+            &nbsp;•&nbsp;
+          </Typography>
+          <FooterLink color="text.secondary" href="/terms">
+            Terms of Service
+          </FooterLink>
+        </div>
+
+        {/* <ScrollLink to="os" smooth={true} duration={2000}>
+          <Typography variant="body2" sx={footerLinkStyle}>
+            Back to Top
+          </Typography>
+        </ScrollLink> */}
       </LowerFooter>
     </StyledContainer>
   );

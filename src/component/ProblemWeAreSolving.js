@@ -9,7 +9,7 @@ const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",
   minHeight: "100vh",
   width: "100%",
-  background: "#2B2B60",
+  // background: "#EFEEEF",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -20,7 +20,7 @@ const StyledContainer = styled(Container)({
 });
 
 const Title = styled(Typography)({
-  color: "#EFEEEF",
+  color: "#226A49",
   textAlign: "center",
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
@@ -28,7 +28,7 @@ const Title = styled(Typography)({
 });
 
 const ProblemBoard = styled(Typography)({
-  color: "#EFEEEF",
+  color: "#226A49",
   textAlign: "justify",
   display: "flex",
   flexDirection: "column",
@@ -53,7 +53,6 @@ const ProblemContainer = styled(Box)({
   borderRadius: "1rem",
   borderTop: "1.5px solid #1D2064",
   boxShadow: "0 4px 6px #0f166899",
-  
 });
 
 const ProblemDescription = styled(Box)({
@@ -62,11 +61,11 @@ const ProblemDescription = styled(Box)({
     width: "60%",
   },
   "@media (max-width:600px)": {
-    "&:nth-child(odd)":{
-      order: "2"
+    "&:nth-child(odd)": {
+      order: "2",
     },
-    "&:nth-child(even)":{
-      order: "2"
+    "&:nth-child(even)": {
+      order: "2",
     },
   },
 });
@@ -78,7 +77,7 @@ const ProblemData = styled(Typography)({
 });
 const ProblemBodyText = styled(Typography)({
   fontSize: "clamp(1rem, 2vw, 1.5rem)",
-  color: "#fff",
+  color: "#226A49",
   lineHeight: "1.7",
   opacity: ".8",
 });
@@ -91,11 +90,11 @@ const ProblemImage = styled("img")({
     width: "30%",
   },
   "@media (max-width:600px)": {
-    "&:nth-child(odd)":{
-      order: "1"
+    "&:nth-child(odd)": {
+      order: "1",
     },
-    "&:nth-child(even)":{
-      order: "1"
+    "&:nth-child(even)": {
+      order: "1",
     },
   },
 });
@@ -109,7 +108,6 @@ export default function ProblemWeAreSolving() {
             Problem We are Solving
           </Title>
           <ProblemBoard>
-            
             <ProblemContainer>
               <ProblemDescription>
                 <ProblemData>20 %</ProblemData>
@@ -169,7 +167,6 @@ export default function ProblemWeAreSolving() {
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
-
           </ProblemBoard>
         </Grid>
       </Grid>

@@ -28,19 +28,30 @@ function Header() {
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     const offset = 128;
-    if (sectionElement) {
-      const targetScroll = sectionElement.offsetTop - offset;
-      sectionElement.scrollIntoView({ behavior: "smooth" });
-      window.scrollTo({
-        top: targetScroll,
-        behavior: "smooth",
-      });
-      setOpen(false);
+    if (globalThis.location.pathname === '/') {
+      if (sectionId === '') {
+        globalThis.location.href = '/';
+      } else if (sectionElement) {
+        const targetScroll = sectionElement.offsetTop - offset;
+        sectionElement.scrollIntoView({ behavior: "smooth" });
+        globalThis.scrollTo({
+          top: targetScroll,
+          behavior: "smooth",
+        });
+        setOpen(false);
+      }
+    } else {
+      if (sectionId === ' ') {
+        globalThis.location.href = '/';
+      } else {
+        globalThis.location.href = '/#' + sectionId;
+      }
     }
   };
+  
 
   return (
-    <div>
+    <div >
       <AppBar
         position="fixed"
         sx={{
@@ -51,7 +62,7 @@ function Header() {
           width: "100%",
         }}
       >
-        <Container maxWidth="lg" sx={{
+        <Container maxWidth="xl" sx={{
           // zIndex: '5'
         }}>
           <Toolbar
@@ -86,7 +97,7 @@ function Header() {
                 px: 0,
               }}
             >
-              <img src={LogoImg} style={logoStyle} alt="EcoThaili" />
+              <img src={LogoImg} style={logoStyle} alt="EcoThaili" onClick={() => scrollToSection("ms")} />
               <Box
                 sx={{ display: { xs: "none", md: "flex", margin: "100px" } }}
               >
@@ -112,6 +123,14 @@ function Header() {
                 >
                   <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
                     Material Composition
+                  </Typography>
+                </MenuItem>
+                <MenuItem
+                  onClick={() => scrollToSection("mp")}
+                  sx={{ py: "6px", px: "12px" }}
+                >
+                  <Typography variant="body2" color="#2B2B60" fontWeight="600" fontSize="clamp(.8rem, 1vw, 1rem)">
+                    Manufacturing Process
                   </Typography>
                 </MenuItem>
                 <MenuItem
