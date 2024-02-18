@@ -170,7 +170,7 @@ export default function FAQ() {
                   sx={{ maxWidth: { sm: "100%", md: "70%" } }}
                 >
                   EcoThaili bags are available for purchase on our website
-                  [https://team-inventrix.vercel.app/] and also available near
+                  [https://ecothaili.vercel.app/] and also available near
                   your shopping markets. You can explore our range of
                   eco-friendly products and make a sustainable choice.
                 </Answer>
