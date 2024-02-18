@@ -118,7 +118,7 @@ export default function OurStory() {
               </Price>
               <BuyButton variant="contained" sx={{ width: { xs: "100%" } }}>
                 <Link
-                  href="/login"
+                  href="/signin"
                   style={{
                     color: "white",
                     textDecoration: "none",
@@ -145,7 +145,7 @@ export default function OurStory() {
               </Price>
               <BuyButton variant="contained" sx={{ width: { xs: "100%" } }}>
                 <Link
-                  href="/login"
+                  href="/signin"
                   style={{
                     color: "white",
                     textDecoration: "none",
@@ -172,7 +172,7 @@ export default function OurStory() {
               </Price>
               <BuyButton variant="contained" sx={{ width: { xs: "100%" } }}>
                 <Link
-                  href="/login"
+                  href="/signin"
                   style={{
                     color: "white",
                     textDecoration: "none",
@@ -199,7 +199,7 @@ export default function OurStory() {
               </Price>
               <BuyButton variant="contained" sx={{ width: { xs: "100%" } }}>
                 <Link
-                  href="/login"
+                  href="/signin"
                   style={{
                     color: "white",
                     textDecoration: "none",

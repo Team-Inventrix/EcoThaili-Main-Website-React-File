@@ -213,7 +213,7 @@ export default function Footer() {
           >
             About us
           </FooterLink>
-          <FooterLink color="text.secondary">Careers (no page yet)</FooterLink>
+          <FooterLink color="text.secondary" href="/career">Careers</FooterLink>
           <FooterLink color="text.secondary" href="/contact">
             Contact
           </FooterLink>
