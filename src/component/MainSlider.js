@@ -64,7 +64,7 @@ function MainSlider() {
 
   return (
     <Container
-      id="os"
+      id="ms"
       sx={{
         py: { xs: 8, sm: 16, md: 6 },
         px: { xs: "0", sm: "0", md: 0 },
