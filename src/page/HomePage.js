@@ -28,17 +28,17 @@ export default function HomePage() {
   return (
     <>
       <SpeedInsights />
-      <MainSlider />
-      <Header active_item="Our Story" />
+      <Header active_item="Header" id="h"/>
+      <MainSlider active_item="Our Story" id="ms" />
       <OurStory active_item="Our Story" id="os" />
-      <ProblemWeAreSolving active_item="Our Story" id="pwas" />
-      <MaterialComposition active_item="Our Story" id="mc" />
-      <ManufacturingProcess active_item="Our Story" id="mp" />
-      <OurImpact active_item="Our Story" id="oi" />
-      <Product active_item="Our Story" id="product" />
-      <FAQ active_item="Our Story" id="faq" />
-      <About active_item="Our Story" id="about" />
-      <Footer active_item="Our Story" id="footer" />
+      <ProblemWeAreSolving active_item="Problem We Are Solving" id="pwas" />
+      <MaterialComposition active_item="Material Composition" id="mc" />
+      <ManufacturingProcess active_item="Manufacturing Process" id="mp" />
+      <OurImpact active_item="Our Impact" id="oi" />
+      <Product active_item="Product" id="p" />
+      <FAQ active_item="FAQ" id="faq" />
+      <About active_item="About Us" id="a" />
+      <Footer active_item="Footer" id="f" />
     </>
   );
 }

@@ -134,7 +134,7 @@ export default function Footer() {
   };
 
   return (
-    <StyledContainer maxWidth={false}>
+    <StyledContainer maxWidth={false} id="f">
       <UpperFooter>
         <LogoSide>
           <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
