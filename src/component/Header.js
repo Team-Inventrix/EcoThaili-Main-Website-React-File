@@ -114,7 +114,7 @@ function Header() {
                 </Typography>
               </MenuItem>
               <MenuItem
-                onClick={() => scrollToSection("pwas")}
+                onClick={() => scrollToSection("ps")}
                 sx={{ py: "6px", px: "12px" }}
               >
                 <Typography
@@ -123,7 +123,7 @@ function Header() {
                   fontWeight="600"
                   fontSize="clamp(.8rem, 1vw, 1rem)"
                 >
-                  Problem We are Solving
+                  Problem Statement
                 </Typography>
               </MenuItem>
               <MenuItem

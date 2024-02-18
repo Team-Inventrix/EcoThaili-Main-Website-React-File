@@ -102,20 +102,20 @@ const ProblemImage = styled("img")({
   },
 });
 
-export default function ProblemWeAreSolving() {
+export default function ProblemStatement() {
   return (
-    <StyledContainer id="pwas" maxWidth={false}>
+    <StyledContainer id="ps" maxWidth={false}>
       <Grid container spacing={6}>
         <Grid item xs={12} md={12}>
           <Title component="h2" variant="h4">
-            Problem We are Solving
+            Problem Statement
           </Title>
           <ProblemBoard>
             <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemDescription>
-                <ProblemData>20 %</ProblemData>
+                <ProblemData>98 %</ProblemData>
                 <ProblemBodyText>
-                Every year, Nepal generates a staggering amount of plastic waste, contributing to environmental degradation and threatening biodiversity. Our mission is to combat this issue by transforming banana crop waste into eco-friendly plastic solutions.
+                Globally, 98% of the 400 million metric tonnes of plastic produced yearly is derived from fossil fuels, with 3 metric tonnes of fossil fuel consumed per 1 metric tonne of plastic.[source: our world in data]
                 </ProblemBodyText>
               </ProblemDescription>
               <ProblemImage
@@ -130,18 +130,18 @@ export default function ProblemWeAreSolving() {
                 src={Problem2Image}
               />
               <ProblemDescription>
-                <ProblemData>80 %</ProblemData>
+                <ProblemData>400 years</ProblemData>
                 <ProblemBodyText>
-                By utilizing EcoThaili, we aim to significantly reduce greenhouse gas emissions, diverting banana crop waste from landfills and providing a sustainable alternative to traditional plastic.
+                Plastic degradation takes over 400 years, and only 9% is currently able to recycled. [Source: NatGeo]
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
 
             <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemDescription>
-                <ProblemData>30 %</ProblemData>
+                <ProblemData>3.3 %</ProblemData>
                 <ProblemBodyText>
-                Our initiative not only benefits the environment but also empowers local communities by creating jobs and fostering economic growth. By supporting EcoThaili, you're contributing to the development of sustainable cities and livelihoods.
+                Plastics contribute to 3.3% of global emissions, amounting to approximately 2 billion tonnes of CO2 equivalent annually.[source: our world in data]
                 </ProblemBodyText>
               </ProblemDescription>
               <ProblemImage
@@ -156,9 +156,9 @@ export default function ProblemWeAreSolving() {
                 src={Problem4Image}
               />
               <ProblemDescription>
-                <ProblemData>50 %</ProblemData>
+                <ProblemData>8 - 10 Million</ProblemData>
                 <ProblemBodyText>
-                Through widespread adoption of EcoThaili, we aim to disrupt the plastic industry's reliance on imports, promoting self-sufficiency and boosting the local economy. Join us in reshaping the market landscape with sustainable alternatives.
+                Annually, 8-10 million metric tonnes of plastic enter oceans, worsening the accumulation. Over 700 species suffer negative interactions with marine litter[mainly plastics], leading to about 100,000 animal deaths yearly due to entanglement.
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
