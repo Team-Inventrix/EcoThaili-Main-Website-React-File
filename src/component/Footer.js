@@ -182,8 +182,8 @@ export default function Footer() {
           <FooterLink onClick={() => scrollToSection("os")}>
             Our Story
           </FooterLink>
-          <FooterLink onClick={() => scrollToSection("pwas")}>
-            Problem We are Solving
+          <FooterLink onClick={() => scrollToSection("ps")}>
+            Problem Statement
           </FooterLink>
           <FooterLink onClick={() => scrollToSection("mc")}>
             Material Composition

@@ -3,7 +3,7 @@ import Header from "../component/Header";
 import FAQ from "../component/FAQ";
 import Footer from "../component/Footer";
 import OurStory from "../component/OurStory";
-import ProblemWeAreSolving from "../component/ProblemWeAreSolving";
+import ProblemWeAreSolving from "../component/ProblemStatement";
 import MaterialComposition from "../component/MaterialComposition";
 import OurImpact from "../component/OurImpact";
 import About from "../component/About";
