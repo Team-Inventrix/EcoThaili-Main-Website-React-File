@@ -21,19 +21,19 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews, { interval: 5000 });
 
 const images = [
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
+    label: "Banana Leaves",
     imgPath: SliderImg1,
   },
   {
-    label: "Bird",
+    label: "Banana Leaf",
     imgPath: SliderImg2,
   },
   {
-    label: "Bali, Indonesia",
+    label: "Banana PseudoSteam",
     imgPath: SliderImg3,
   },
   {
-    label: "Goč, Serbia",
+    label: "Information about Banana PseudoSteam and Leaf",
     imgPath: SliderImg4,
   },
 ];
@@ -58,7 +58,6 @@ function MainSlider() {
   const StyledContainer = {
     padding: "5rem 1.5rem",
     "@media (min-width:600px)": {
-      // padding: "5rem",
       textAlign: "center",
     },
   };
@@ -67,15 +66,15 @@ function MainSlider() {
     <Container
       id="os"
       sx={{
-        py: { xs: 8, sm: 16, md: 8 },
-        px: { xs: "0",sm:"0", md: 0 },
+        py: { xs: 8, sm: 16, md: 6 },
+        px: { xs: "0", sm: "0", md: 0 },
         pb: { md: "0" },
-        pt: { sm:"5rem"},
-        mt: { xs: "1rem",},
-        mb: { xs: "-4rem",sm:"-8rem", md: "-2rem" },
+        pt: { sm: "5rem" },
+        mt: { xs: "1rem" },
+        mb: { xs: "-4rem", sm: "-8rem", md: "-2rem" },
         minHeight: { xs: "50vh", md: "100vh" },
-        maxWidth: {md:"100%"},
-        overflow:{md:"hidden"}
+        maxWidth: { md: "100%" },
+        overflow: { md: "hidden" },
       }}
       maxWidth={false}
     >
@@ -85,7 +84,7 @@ function MainSlider() {
           minWidth: { xs: "100vw" },
           maxHeight: { md: "90vh" },
           margin: { xs: "0", md: "2rem 0" },
-          px:{xs:"0"},
+          px: { xs: "0" },
         }}
         overflow="hidden"
       >
@@ -130,54 +129,6 @@ function MainSlider() {
                   </div>
                 ))}
               </AutoPlaySwipeableViews>
-
-              {/* <Paper
-  square
-  elevation={0}
-  position="absolute"
-  sx={{
-    display: 'flex',
-    alignItems: 'center',
-    height: 50,
-    pl: 2,
-    bgcolor: 'transparant',
-  }}
-  
->
-  <Typography style={{fontWeight:"bold"}}>{images[activeStep].label}</Typography>
-</Paper>
-
-<MobileStepper
-  steps={maxSteps}
-  position="absolute"
-  top="0"
-  left="0"
-  activeStep={activeStep}
-  nextButton={
-    <Button
-      size="small"
-      onClick={handleNext}
-      disabled={activeStep === maxSteps - 1}
-    >
-      Next
-      {theme.direction === 'rtl' ? (
-        <KeyboardArrowLeft />
-      ) : (
-        <KeyboardArrowRight />
-      )}
-    </Button>
-  }
-  backButton={
-    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-      {theme.direction === 'rtl' ? (
-        <KeyboardArrowRight />
-      ) : (
-        <KeyboardArrowLeft />
-      )}
-      Back
-    </Button>
-  }
-/> */}
             </Box>
           </div>
         </Grid>
