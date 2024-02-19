@@ -59,6 +59,7 @@ const ProblemContainer = styled(Box)({
 
 const ProblemDescription = styled(Box)({
   width: "100%",
+  textAlign: "center",
   "@media (min-width:600px)": {
     width: "50vw",
   },
@@ -83,7 +84,6 @@ const ProblemBodyText = styled(Typography)({
   color: "#226A49",
   lineHeight: "1.7",
   opacity: ".8",
-  textAlign: "center",
 });
 
 const ProblemImage = styled("img")({
