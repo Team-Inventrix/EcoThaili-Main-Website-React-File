@@ -115,7 +115,7 @@ export default function ProblemStatement() {
               <ProblemDescription>
                 <ProblemData>1200 t</ProblemData>
                 <ProblemBodyText>
-                  (metric tonnes) of fossil fuels are utilized to generate 98% of the annual 400 million metric tonnes of plastic. // [source: our world in data]
+                  (metric tonnes) of fossil fuels are utilized to generate 98% of the annual 400 million metric tonnes of plastic.
                 </ProblemBodyText>
               </ProblemDescription>
               <ProblemImage
@@ -132,7 +132,7 @@ export default function ProblemStatement() {
               <ProblemDescription>
                 <ProblemData>400 years</ProblemData>
                 <ProblemBodyText>
-                  is the duration required for plastic degradation, with only 9% presently capable of being recycled. //[Source: NatGeo]
+                  is the duration required for plastic degradation, with only 9% presently capable of being recycled.
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
@@ -141,7 +141,7 @@ export default function ProblemStatement() {
               <ProblemDescription>
                 <ProblemData>2 Gt</ProblemData>
                 <ProblemBodyText>
-                  (billion tonnes) of CO2 equivalent represents only 3.3% of global emissions attributed to plastic. // [source: our world in data]
+                  (billion tonnes) of CO2 equivalent represents only 3.3% of global emissions attributed to plastic.
                 </ProblemBodyText>
               </ProblemDescription>
               <ProblemImage
@@ -158,7 +158,7 @@ export default function ProblemStatement() {
               <ProblemDescription>
                 <ProblemData>8 - 10 Mt</ProblemData>
                 <ProblemBodyText>
-                (million metric tonnes) of plastic enter the oceans annually, worsening the buildup and causing around 100,000 animal deaths due to entanglement. // [source: our world in data]
+                (million metric tonnes) of plastic enter the oceans annually, worsening the buildup and causing around 100,000 animal deaths due to entanglement.
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
