@@ -4,10 +4,10 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import Box from "@mui/material/Box";
-import Problem1Image from "../image/problem/problem-1.webp";
-import Problem2Image from "../image/problem/problem-2.webp";
-import Problem3Image from "../image/problem/problem-3.webp";
-import Problem4Image from "../image/problem/problem-4.webp";
+import Problem1Image from "../image/problem/problem-1.png";
+import Problem2Image from "../image/problem/problem-2.png";
+import Problem3Image from "../image/problem/problem-3.png";
+import Problem4Image from "../image/problem/problem-4.jpg";
 
 const StyledContainer = styled(Container)({
   padding: "5rem 0",
@@ -83,6 +83,7 @@ const ProblemBodyText = styled(Typography)({
   color: "#226A49",
   lineHeight: "1.7",
   opacity: ".8",
+  textAlign: "center",
 });
 
 const ProblemImage = styled("img")({
