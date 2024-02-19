@@ -4,10 +4,10 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import Box from "@mui/material/Box";
-import Problem1Image from "../image/problem/problem-1.jpg";
-import Problem2Image from "../image/problem/problem-2.jpg";
-import Problem3Image from "../image/problem/problem-3.jpg";
-import Problem4Image from "../image/problem/problem-4.jpg";
+import Problem1Image from "../image/problem/problem-1.webp";
+import Problem2Image from "../image/problem/problem-2.webp";
+import Problem3Image from "../image/problem/problem-3.webp";
+import Problem4Image from "../image/problem/problem-4.webp";
 
 const StyledContainer = styled(Container)({
   padding: "5rem 0",

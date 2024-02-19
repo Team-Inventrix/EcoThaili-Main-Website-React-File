@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import bananaLeaf from "../image/banana-leaf 1.png";
 
 const StyledContainer = styled(Container)({
   minHeight: "100vh",

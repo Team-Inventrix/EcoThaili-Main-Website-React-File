@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
-import ManufacturingProcessChart from "../image/designedImages/manufacturing.png";
+import ManufacturingProcessChart from "../image/designedImages/manufacturing.webp";
 
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",

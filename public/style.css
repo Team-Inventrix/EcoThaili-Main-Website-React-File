@@ -37,6 +37,14 @@ a {
   text-decoration: none;
 }
 
+.active {
+  border-bottom: 3px solid #226a49;
+}
+
+/* a.active img{
+  border: none;
+} */
+
 nav li {
   list-style: none;
   color: var(--primary-green-color-dark);

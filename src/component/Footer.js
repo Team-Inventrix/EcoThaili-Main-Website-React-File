@@ -7,7 +7,7 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-import Ecothaili from "../image/logo/ecoThaili-color-logo-box.png";
+import Ecothaili from "../image/logo/ecoThaili-color-logo-box.webp";
 import GitHubicon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";

@@ -4,12 +4,12 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/system";
-import GreenHouseIcon from "../image/icons/greenHouseGas.png";
-import UpCycleIcon from "../image/icons/upCycle.png";
-import ChemicalWasteIcon from "../image/icons/waste.png";
-import SustainableCityIcon from "../image/icons/sustainableCity.png";
-import LowEnergyIcon from "../image/icons/lowEnergy.png";
-import ZeroValueWasteIcon from "../image/icons/zeroWasteEconomy.png";
+import GreenHouseIcon from "../image/icons/greenHouseGas.webp";
+import UpCycleIcon from "../image/icons/upCycle.webp";
+import ChemicalWasteIcon from "../image/icons/waste.webp";
+import SustainableCityIcon from "../image/icons/sustainableCity.webp";
+import LowEnergyIcon from "../image/icons/lowEnergy.webp";
+import ZeroValueWasteIcon from "../image/icons/zeroWasteEconomy.webp";
 
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",

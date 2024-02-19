@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../component/Header";
 import FAQ from "../component/FAQ";
 import Footer from "../component/Footer";
 import OurStory from "../component/OurStory";
-import ProblemWeAreSolving from "../component/ProblemStatement";
+import ProblemStatement from "../component/ProblemStatement";
 import MaterialComposition from "../component/MaterialComposition";
 import OurImpact from "../component/OurImpact";
 import About from "../component/About";
@@ -31,7 +31,7 @@ export default function HomePage() {
       <Header active_item="Header" id="h"/>
       <MainSlider active_item="Our Story" id="ms" />
       <OurStory active_item="Our Story" id="os" />
-      <ProblemWeAreSolving active_item="Problem We Are Solving" id="pwas" />
+      <ProblemStatement active_item="Problem Statement" id="ps" />
       <MaterialComposition active_item="Material Composition" id="mc" />
       <ManufacturingProcess active_item="Manufacturing Process" id="mp" />
       <OurImpact active_item="Our Impact" id="oi" />
