@@ -80,7 +80,7 @@ const ProblemData = styled(Typography)({
 });
 const ProblemBodyText = styled(Typography)({
   fontSize: "clamp(1.4rem, 1vw, 3rem)",
-  textAlign: "justify",
+  textAlign: "center",
   color: "#226A49",
   lineHeight: "1.7",
   opacity: ".8",
