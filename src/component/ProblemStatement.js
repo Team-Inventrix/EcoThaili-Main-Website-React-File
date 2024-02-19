@@ -113,7 +113,7 @@ export default function ProblemStatement() {
           <ProblemBoard>
             <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemDescription>
-                <ProblemData>1200 t</ProblemData>
+                <ProblemData>1200 T</ProblemData>
                 <ProblemBodyText>
                   (metric tonnes) of fossil fuels are utilized to generate 98% of the annual 400 million metric tonnes of plastic.
                 </ProblemBodyText>
@@ -139,7 +139,7 @@ export default function ProblemStatement() {
 
             <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemDescription>
-                <ProblemData>2 Gt</ProblemData>
+                <ProblemData>2 GT</ProblemData>
                 <ProblemBodyText>
                   (billion tonnes) of CO2 equivalent represents only 3.3% of global emissions attributed to plastic.
                 </ProblemBodyText>
@@ -156,7 +156,7 @@ export default function ProblemStatement() {
                 src={Problem4Image}
               />
               <ProblemDescription>
-                <ProblemData>8 - 10 Mt</ProblemData>
+                <ProblemData>8 - 10 MT</ProblemData>
                 <ProblemBodyText>
                 (million metric tonnes) of plastic enter the oceans annually, worsening the buildup and causing around 100,000 animal deaths due to entanglement.
                 </ProblemBodyText>
