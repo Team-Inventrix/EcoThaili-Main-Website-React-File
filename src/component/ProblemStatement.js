@@ -59,6 +59,7 @@ const ProblemContainer = styled(Box)({
 
 const ProblemDescription = styled(Box)({
   width: "100%",
+  textAlign: "center",
   "@media (min-width:600px)": {
     width: "50vw",
   },
