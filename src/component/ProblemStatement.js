@@ -113,9 +113,9 @@ export default function ProblemStatement() {
           <ProblemBoard>
             <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemDescription>
-                <ProblemData>98 %</ProblemData>
+                <ProblemData>1200 t</ProblemData>
                 <ProblemBodyText>
-                Globally, 98% of the 400 million metric tonnes of plastic produced yearly is derived from fossil fuels, with 3 metric tonnes of fossil fuel consumed per 1 metric tonne of plastic.[source: our world in data]
+                  (metric tonnes) of fossil fuels are utilized to generate 98% of the annual 400 million metric tonnes of plastic. // [source: our world in data]
                 </ProblemBodyText>
               </ProblemDescription>
               <ProblemImage
@@ -132,16 +132,16 @@ export default function ProblemStatement() {
               <ProblemDescription>
                 <ProblemData>400 years</ProblemData>
                 <ProblemBodyText>
-                Plastic degradation takes over 400 years, and only 9% is currently able to recycled. [Source: NatGeo]
+                  is the duration required for plastic degradation, with only 9% presently capable of being recycled. //[Source: NatGeo]
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
 
             <ProblemContainer sx={{width:{xs:"80vw",sm:"90vw"}}}>
               <ProblemDescription>
-                <ProblemData>3.3 %</ProblemData>
+                <ProblemData>2 Gt</ProblemData>
                 <ProblemBodyText>
-                Plastics contribute to 3.3% of global emissions, amounting to approximately 2 billion tonnes of CO2 equivalent annually.[source: our world in data]
+                  (billion tonnes) of CO2 equivalent represents only 3.3% of global emissions attributed to plastic. // [source: our world in data]
                 </ProblemBodyText>
               </ProblemDescription>
               <ProblemImage
@@ -156,9 +156,9 @@ export default function ProblemStatement() {
                 src={Problem4Image}
               />
               <ProblemDescription>
-                <ProblemData>8 - 10 Million</ProblemData>
+                <ProblemData>8 - 10 Mt</ProblemData>
                 <ProblemBodyText>
-                Annually, 8-10 million metric tonnes of plastic enter oceans, worsening the accumulation. Over 700 species suffer negative interactions with marine litter[mainly plastics], leading to about 100,000 animal deaths yearly due to entanglement.
+                (million metric tonnes) of plastic enter the oceans annually, worsening the buildup and causing around 100,000 animal deaths due to entanglement. // [source: our world in data]
                 </ProblemBodyText>
               </ProblemDescription>
             </ProblemContainer>
