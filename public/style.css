@@ -39,6 +39,7 @@ a {
 
 .active {
   border-bottom: 3px solid #226a49;
+  font-weight: bolder;
 }
 
 /* a.active img{
