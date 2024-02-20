@@ -4,6 +4,10 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 
+import Logo from "../image/logo/ecoThaili-color-logo.webp";
+
+const TextComponent = "Hello World";
+
 const StyledContainer = styled(Container)({
   padding: "5rem 1.5rem",
   height: "100%",
@@ -40,13 +44,17 @@ const Body = styled(Typography)({
 
 export default function OurStory() {
   return (
-    <StyledContainer id="os" maxWidth={false} sx={{height:{sm:"100%"},minHeight: { sm: "100%", md: "100vh" }}}>
+    <StyledContainer
+      id="os"
+      maxWidth={false}
+      sx={{ height: { sm: "100%" }, minHeight: { sm: "100%", md: "100vh" } }}
+    >
       <Grid container spacing={6}>
         <Grid item xs={12} md={12}>
           <Title component="h2" variant="h4">
             The EcoThaili Story
           </Title>
-          <Body variant="body1">
+          <Body variant="body1" style={{ position: "relative" }}>
             Our mission is to protect our only planet, by creating eco-friendly
             plastic from banana crop waste. It's not just a bag; it's a promise
             to nurture our planet. Every use is a step towards a cleaner,

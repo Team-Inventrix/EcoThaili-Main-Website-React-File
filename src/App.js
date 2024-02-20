@@ -9,6 +9,7 @@ import SignInPage from "./page/SignInPage";
 import SignUpPage from "./page/SignUpPage";
 
 import CareerPage from "./page/CareerPage";
+import OurStory from "./component/OurStory";
 
 function App() {
   return (

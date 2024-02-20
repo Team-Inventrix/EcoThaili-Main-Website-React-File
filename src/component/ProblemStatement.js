@@ -53,15 +53,15 @@ const ProblemContainer = styled(Box)({
   gap: "5vw",
   padding: "1rem",
   borderRadius: "1rem",
-  borderTop: "1.5px solid #1D2064",
-  boxShadow: "0 4px 6px #0f166899",
+  // borderTop: "1.5px solid #1D2064",
+  // boxShadow: "0 4px 6px #0f166899",
 });
 
 const ProblemDescription = styled(Box)({
   width: "100%",
   textAlign: "center",
   "@media (min-width:600px)": {
-    width: "50vw",
+    width: "45vw",
   },
   "@media (max-width:600px)": {
     "&:nth-child(odd)": {
@@ -89,9 +89,9 @@ const ProblemBodyText = styled(Typography)({
 const ProblemImage = styled("img")({
   width: "100%",
   aspectRatio: "5/4",
-  objectFit: "fill",
+  objectFit: "content",
   "@media (min-width:600px)": {
-    width: "30%",
+    width: "40%",
   },
   "@media (max-width:600px)": {
     "&:nth-child(odd)": {

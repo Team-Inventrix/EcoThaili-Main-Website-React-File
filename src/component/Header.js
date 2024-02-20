@@ -73,6 +73,10 @@ function Header() {
                 margin: "20px",
                 px: 0,
               }}
+              style={{
+                display:"flex",
+                justifyContent:"space-between", alignItems:"center",
+              }}
             >
               <Link
                 to="ms"
@@ -90,7 +94,7 @@ function Header() {
                 <img src={LogoImg} style={logoStyle} alt="EcoThaili" />
               </Link>
               <Box
-                sx={{ display: { xs: "none", md: "flex", margin: "100px" } }}
+                sx={{ display: { xs: "none", md: "flex", margin: "100px 0" } }}
               >
                 <Link
                   to="os"
