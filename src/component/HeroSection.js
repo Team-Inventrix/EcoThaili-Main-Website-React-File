@@ -21,13 +21,14 @@ export default function HeroSection() {
       maxWidth="xl"
       sx={{
         height: { sm: "100%" },
-        minHeight: { sm: "100%", md: "100vh" },
+        minHeight: { xs:"100%",sm: "100%", md: "100vh" },
         display: "flex",
+        flexDirection:{xs:"column-reverse",sm:"row"},
         justifyContent: "space-between",
         alignItem: "center",
-        gap: { md: "5vw" },
+        gap: { xs:"0",sm:"5vw", md: "5vw" },
         width: "100%",
-        padding: { sm: "8rem 5vw 5rem 5vw", md: "10rem 5vw 5rem 5vw" },
+        padding: { xs:"5rem 5vw 5rem 5vw",sm: "8rem 5vw 5rem 5vw", md: "10rem 5vw 5rem 5vw" },
         textAlign: "center",
       }}
     >
@@ -38,7 +39,7 @@ export default function HeroSection() {
           justifyContent: "center",
           alignItem: "center",
           flexDirection: "column",
-          gap: "3vw",
+          gap: {xs:"3vh",sm:"3vw"},
         }}
       >
         <Box>
@@ -47,14 +48,14 @@ export default function HeroSection() {
               color: "#226a49",
               textAlign: "center",
               fontWeight: 700,
-              fontSize: {md:"clamp(2rem, 6vw, 6.2rem)",sm:"clamp(4.5rem, 6vw, 6rem)"},
+              fontSize: {xs:"clamp(3.5rem, 4vw, 4rem)",sm:"clamp(4.5rem, 6vw, 6rem)",md:"clamp(2rem, 6vw, 6.2rem)",},
             }}
           >
             EcoThaili
           </Typography>
           <Typography
             sx={{
-              fontSize: {md:"clamp(1.5rem, 1.3vw, 3rem)",sm:"clamp(1.3rem, 1.3vw, 3rem)"},
+              fontSize: {xs:"clamp(1rem, 2vw, 2rem)",sm:"clamp(1.3rem, 1.3vw, 3rem)",md:"clamp(1.5rem, 1.3vw, 3rem)",},
               margin: "-1rem 0 0 0",
               fontWeight: "bold",
             }}
@@ -62,7 +63,7 @@ export default function HeroSection() {
             Bag The Future Responsibly
           </Typography>
           <Typography
-            sx={{ fontSize: "clamp(1rem, 1vw, 1.4rem)", opacity: ".7" }}
+            sx={{ fontSize: {xs:"clamp(.8rem, 1vw, 1rem)",sm:"clamp(1rem, 1vw, 1.4rem)"}, opacity: ".7" }}
           >
             🌿#EcoThaili #BeatPlasticWithUs
           </Typography>
@@ -96,7 +97,7 @@ export default function HeroSection() {
       <Box
         style={{}}
         sx={{
-          width: { md: "calc(50vw - 10vw)", sm: "calc(50vw - 10vw)" },
+          width: {xs: "calc(100vw - 10vw)", sm: "calc(50vw - 10vw)", md: "calc(50vw - 10vw)",  },
         }}
       >
         <img
