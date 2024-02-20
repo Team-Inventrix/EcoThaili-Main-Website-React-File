@@ -1,41 +1,22 @@
 import * as React from "react";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
-
-import Logo from "../image/logo/ecoThaili-color-logo.webp";
 import HeroImg from "../image/hero-img.PNG";
 import { Button } from "react-scroll";
 import { Box } from "@mui/material";
-
-const TextComponent = "Hello World";
-
-const StyledContainer = styled(Container)({
-  padding: "5rem 0",
-  width: "100%",
-  zIndex: "2",
-  "@media (min-width:600px)": {
-    // padding: "15vw 5vw",
-    padding: "10rem 5vw",
-    minHeight: "100vh",
-    textAlign: "center",
-    // margin: "0 5rem"
-  },
-});
 
 const Title = styled(Typography)({
   color: "#226a49",
   textAlign: "center",
   fontWeight: 700,
-  fontSize: "clamp(2rem, 6vw, 6.2rem)", // Use clamp() here
-  //   margin: "0 0 5vw 0",
+  fontSize: "clamp(2rem, 6vw, 6.2rem)",
 });
 
 export default function HeroSection() {
   return (
-    <StyledContainer
+    <Container
       id="hs"
       maxWidth="xl"
       sx={{
@@ -45,8 +26,9 @@ export default function HeroSection() {
         justifyContent: "space-between",
         alignItem: "center",
         gap: { md: "5vw" },
-        // border: "2px solid red",
         width: "100%",
+        padding: { sm: "8rem 5vw 5rem 5vw", md: "10rem 5vw 5rem 5vw" },
+        textAlign: "center",
       }}
     >
       <Box
@@ -60,10 +42,19 @@ export default function HeroSection() {
         }}
       >
         <Box>
-          <Title>EcoThaili</Title>
           <Typography
-            style={{
-              fontSize: "clamp(1.5rem, 1.3vw, 3rem)",
+            sx={{
+              color: "#226a49",
+              textAlign: "center",
+              fontWeight: 700,
+              fontSize: {md:"clamp(2rem, 6vw, 6.2rem)",sm:"clamp(4.5rem, 6vw, 6rem)"},
+            }}
+          >
+            EcoThaili
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: {md:"clamp(1.5rem, 1.3vw, 3rem)",sm:"clamp(1.3rem, 1.3vw, 3rem)"},
               margin: "-1rem 0 0 0",
               fontWeight: "bold",
             }}
@@ -71,7 +62,7 @@ export default function HeroSection() {
             Bag The Future Responsibly
           </Typography>
           <Typography
-            style={{ fontSize: "clamp(1rem, 1vw, 1.4rem)", opacity: ".7" }}
+            sx={{ fontSize: "clamp(1rem, 1vw, 1.4rem)", opacity: ".7" }}
           >
             🌿#EcoThaili #BeatPlasticWithUs
           </Typography>
@@ -105,11 +96,16 @@ export default function HeroSection() {
       <Box
         style={{}}
         sx={{
-          width: { md: "calc(50vw - 10vw)",sm:"calc(100vw - 20vw)" },
+          width: { md: "calc(50vw - 10vw)", sm: "calc(50vw - 10vw)" },
         }}
       >
-        <img src={HeroImg} />
+        <img
+          src={HeroImg}
+          alt="EcoThaili Bag Hero Image"
+          height="auto"
+          width="100%"
+        />
       </Box>
-    </StyledContainer>
+    </Container>
   );
 }
