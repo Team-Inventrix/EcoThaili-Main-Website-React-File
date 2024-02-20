@@ -11,6 +11,11 @@ import SliderImg3 from "../image/sliderImages/slider-3.webp";
 import SliderImg4 from "../image/sliderImages/slider-4.webp";
 import { styled } from "@mui/system";
 
+import Logo from "../image/logo/ecoThaili-color-logo.webp";
+import { Typography } from "@mui/material";
+
+const TextComponent = "Hello World";
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews, { interval: 5000 });
 
 const images = [
@@ -90,6 +95,7 @@ function MainSlider() {
               }}
               id="ms"
             >
+              
               <AutoPlaySwipeableViews
                 axis={theme.direction === "rtl" ? "x-reverse" : "x"}
                 index={activeStep}
@@ -102,19 +108,21 @@ function MainSlider() {
                     style={{
                       height: "100%",
                       overflow: "hidden",
+                      position: "relative", // Add this
                     }}
                   >
                     {Math.abs(activeStep - index) <= 2 ? (
                       <Box
                         component="img"
                         sx={{
-                          height: "100%",
-                          width: "100%",
+                          height: "50%", // Adjust this to change the image size
+                          width: "50%", // Adjust this to change the image size
                           display: "block",
                           overflow: "hidden",
                           margin: "auto",
                           objectFit: "fill",
                           objectPosition: "center",
+                          opacity: 0.5, // Add this
                         }}
                         src={step.imgPath}
                         alt={step.label}

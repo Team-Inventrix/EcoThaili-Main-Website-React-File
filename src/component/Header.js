@@ -73,6 +73,11 @@ function Header() {
                 margin: "20px",
                 px: 0,
               }}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
             >
               <Link
                 to="ms"
@@ -90,7 +95,7 @@ function Header() {
                 <img src={LogoImg} style={logoStyle} alt="EcoThaili" />
               </Link>
               <Box
-                sx={{ display: { xs: "none", md: "flex", margin: "100px" } }}
+                sx={{ display: { xs: "none", md: "flex", margin: "100px 0" } }}
               >
                 <Link
                   to="os"
@@ -327,87 +332,98 @@ function Header() {
                 <MenuIcon />
               </Button>
               <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-                <Box
-                  sx={{
-                    minWidth: "60dvw",
-                    p: 2,
-                    backgroundColor: "background.paper",
-                    flexGrow: 1,
-                  }}
-                >
                   <Box
                     sx={{
+                      minWidth: "60dvw",
+                    p: 3,
+                    backgroundColor: "background.paper",
                       display: "flex",
                       flexDirection: "column",
+                      gap:"3vw",
                       alignItems: "end",
                       flexGrow: 1,
+                      fontSize: "clamp(1rem, 3vw, 3rem)"
                     }}
-                  ></Box>
-                  <Link
-                    to="os"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
                   >
-                    Our Story
-                  </Link>
-                  <Link
-                    to="ps"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                  >
-                    problem Statement
-                  </Link>
-                  <Link
-                    to="mc"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                  >
-                    Material Composition
-                  </Link>
-                  <Link
-                    to="oi"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                  >
-                    Our Impact
-                  </Link>
-                  <Link
-                    to="p"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                  >
-                    Product
-                  </Link>
-                  <Link
-                    to="faq"
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                  >
-                    FAQ
-                  </Link>
-                  <Link
-                    to="a"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
-                  >
-                    About
-                  </Link>
+                    <Link
+                      to="os"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                      activeClass="active"
+                      p="1rem"
+                    >
+                      Our Story
+                    </Link>
+                    <Link
+                      to="ps"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                      activeClass="active"
+                      p="1rem"
+                    >
+                      problem Statement
+                    </Link>
+                    <Link
+                      to="mc"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                      activeClass="active"
+                      p="1rem"
+                    >
+                      Material Composition
+                    </Link>
+                    <Link
+                      to="oi"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                      activeClass="active"
+                      p="1rem"
+                    >
+                      Our Impact
+                    </Link>
+                    <Link
+                      to="p"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                      activeClass="active"
+                      p="1rem"
+                    >
+                      Product
+                    </Link>
+                    <Link
+                      to="faq"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      activeClass="active"
+                      p="1rem"
+                    >
+                      FAQ
+                    </Link>
+                    <Link
+                      to="a"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={500}
+                      activeClass="active"
+                      p="1rem"
+                    >
+                      About
+                    </Link>
+                  </Box>
                   <Divider />
-                </Box>
               </Drawer>
             </Box>
           </Toolbar>
