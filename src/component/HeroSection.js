@@ -7,6 +7,7 @@ import HeroImg from "../image/hero-img.PNG";
 import { Button as MuiButton } from "@mui/material";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
+import Wave from "../image/waves/heroSection.svg";
 
 const Title = styled(Typography)({
   color: "#226a49",
@@ -15,24 +16,33 @@ const Title = styled(Typography)({
   fontSize: "clamp(2rem, 6vw, 6.2rem)",
 });
 
+const WaveImg = styled("img")({
+  width: "100%",
+  height: "auto",
+  position: "absolute",
+  bottom: "-3rem",
+  left: "0",
+});
+
 export default function HeroSection() {
   return (
     <Container
       id="hs"
-      maxWidth="xl"
+      maxWidth="xxl"
       sx={{
+        position: "relative",
         height: { sm: "100%" },
         minHeight: { xs: "100%", sm: "100%", md: "100vh" },
         display: "flex",
         flexDirection: { xs: "column-reverse", sm: "row" },
         justifyContent: "space-between",
         alignItem: "center",
-        gap: { xs: "0", sm: "5vw", md: "5vw" },
+        gap: { xs: "5vw", sm: "5vw", md: "5vw" },
         width: "100%",
         padding: {
-          xs: "5rem 5vw 5rem 5vw",
-          sm: "8rem 5vw 5rem 5vw",
-          md: "10rem 5vw 5rem 5vw",
+          xs: "6rem 5vw 5rem 5vw",
+          sm: "7rem 5vw 6rem 5vw",
+          md: "6rem 15vw 5rem 15vw",
         },
         textAlign: "center",
       }}
@@ -69,8 +79,9 @@ export default function HeroSection() {
                 sm: "clamp(1.3rem, 1.3vw, 3rem)",
                 md: "clamp(1.5rem, 1.3vw, 3rem)",
               },
-              margin: "-1rem 0 0 0",
+              margin: {xs:"-1rem 0 0 0",sm:"-1.5rem 0 0 0",md:"-2rem 0 0 0"},
               fontWeight: "bold",
+              color: "#458d43",
             }}
           >
             Bag The Future Responsibly
@@ -91,8 +102,8 @@ export default function HeroSection() {
           <MuiButton
             style={{
               width: "max-content",
-              padding: "1rem 2rem",
-              fontSize: "clamp(1rem, 1vw, 2rem)",
+              padding: ".5rem 1rem",
+              fontSize: "clamp(.7rem, 1vw, 2rem)",
               margin: "0 auto",
               border: "none",
               borderRadius: ".5rem",
@@ -135,6 +146,15 @@ export default function HeroSection() {
           }}
         />
       </Box>
+      <WaveImg
+        src={Wave}
+        alt="Wave for next component. This will give a nice transition."
+        sx={{
+          position: {xs:"absolute"},
+          bottom: {xs:"-0.3rem",m:"23.5rem", md: "-3rem" },
+          left: { xs:"0",m:"0", md: "0" },
+        }}
+      />
     </Container>
   );
 }
