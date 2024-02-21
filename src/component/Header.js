@@ -18,16 +18,46 @@ const logoStyle = {
   cursor: "pointer",
 };
 
-function Header() {
+export default function Header() {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
 
-  const handleSetActive = (to) => {
-    console.log(to);
+  const scrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    const offset = 128;
+    if (sectionElement) {
+      const targetScroll = sectionElement.offsetTop - offset;
+      sectionElement.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo({
+        top: targetScroll,
+        behavior: "smooth",
+      });
+      setOpen(false);
+    } // Add this closing brace
+    if (globalThis.location.pathname === '/') {
+      if (sectionId === '') {
+        globalThis.location.href = '/';
+      } else if (sectionElement) {
+        const targetScroll = sectionElement.offsetTop - offset;
+        sectionElement.scrollIntoView({ behavior: "smooth" });
+        globalThis.scrollTo({
+          top: targetScroll,
+          behavior: "smooth",
+        });
+        setOpen(false);
+      }
+    } else {
+      if (sectionId === ' ') {
+        globalThis.location.href = '/';
+      } else {
+        globalThis.location.href = '/#' + sectionId;
+      }
+    }
   };
+  
 
   return (
     <div>
@@ -80,7 +110,7 @@ function Header() {
               }}
             >
               <Link
-                to="ms"
+                to="hs"
                 spy={true}
                 smooth={true}
                 offset={-15}
@@ -98,7 +128,6 @@ function Header() {
                 sx={{ display: { xs: "none", md: "flex", margin: "100px 0" } }}
               >
                 <Link
-                  to="os"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -111,6 +140,7 @@ function Header() {
                       borderBottomColor: "#226a49",
                     },
                   }}
+                  onClick={() => scrollToSection("os")}
                 >
                   <MenuItem
                     style={{
@@ -125,7 +155,6 @@ function Header() {
                 </Link>
 
                 <Link
-                  to="ps"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -138,6 +167,7 @@ function Header() {
                       borderBottomColor: "#226a49",
                     },
                   }}
+                  onClick={() => scrollToSection("ps")}
                 >
                   <MenuItem
                     style={{
@@ -152,7 +182,6 @@ function Header() {
                 </Link>
 
                 <Link
-                  to="mc"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -165,6 +194,7 @@ function Header() {
                       borderBottomColor: "#226a49",
                     },
                   }}
+                  onClick={() => scrollToSection("mc")}
                 >
                   <MenuItem
                     style={{
@@ -179,7 +209,6 @@ function Header() {
                 </Link>
 
                 <Link
-                  to="mp"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -192,6 +221,7 @@ function Header() {
                       borderBottomColor: "#226a49",
                     },
                   }}
+                  onClick={() => scrollToSection("mp")}
                 >
                   <MenuItem
                     style={{
@@ -206,7 +236,6 @@ function Header() {
                 </Link>
 
                 <Link
-                  to="oi"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -219,6 +248,7 @@ function Header() {
                       borderBottomColor: "#226a49",
                     },
                   }}
+                  onClick={() => scrollToSection("oi")}
                 >
                   <MenuItem
                     style={{
@@ -233,7 +263,6 @@ function Header() {
                 </Link>
 
                 <Link
-                  to="p"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -246,6 +275,7 @@ function Header() {
                       borderBottomColor: "#226a49",
                     },
                   }}
+                  onClick={() => scrollToSection("p")}
                 >
                   <MenuItem
                     style={{
@@ -260,7 +290,6 @@ function Header() {
                 </Link>
 
                 <Link
-                  to="faq"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -273,6 +302,7 @@ function Header() {
                       borderBottomColor: "#226a49",
                     },
                   }}
+                  onClick={() => scrollToSection("faq")}
                 >
                   <MenuItem
                     style={{
@@ -287,7 +317,6 @@ function Header() {
                 </Link>
 
                 <Link
-                  to="a"
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -300,6 +329,7 @@ function Header() {
                       borderBottomColor: "#226a49",
                     },
                   }}
+                  onClick={() => scrollToSection("a")}
                 >
                   <MenuItem
                     style={{
@@ -346,79 +376,79 @@ function Header() {
                     }}
                   >
                     <Link
-                      to="os"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={500}
                       activeClass="active"
                       p="1rem"
+                      onClick={() => scrollToSection("os")}
                     >
                       Our Story
                     </Link>
                     <Link
-                      to="ps"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={500}
                       activeClass="active"
                       p="1rem"
+                      onClick={() => scrollToSection("os")}
                     >
                       problem Statement
                     </Link>
                     <Link
-                      to="mc"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={500}
                       activeClass="active"
                       p="1rem"
+                      onClick={() => scrollToSection("os")}
                     >
                       Material Composition
                     </Link>
                     <Link
-                      to="oi"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={500}
                       activeClass="active"
                       p="1rem"
+                      onClick={() => scrollToSection("os")}
                     >
                       Our Impact
                     </Link>
                     <Link
-                      to="p"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={500}
                       activeClass="active"
                       p="1rem"
+                      onClick={() => scrollToSection("os")}
                     >
                       Product
                     </Link>
                     <Link
-                      to="faq"
                       spy={true}
                       smooth={true}
                       offset={50}
                       duration={500}
                       activeClass="active"
                       p="1rem"
+                      onClick={() => scrollToSection("os")}
                     >
                       FAQ
                     </Link>
                     <Link
-                      to="a"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={500}
                       activeClass="active"
                       p="1rem"
+                      onClick={() => scrollToSection("os")}
                     >
                       About
                     </Link>
@@ -432,5 +462,3 @@ function Header() {
     </div>
   );
 }
-
-export default Header;

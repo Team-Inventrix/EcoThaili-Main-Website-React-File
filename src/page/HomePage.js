@@ -14,7 +14,7 @@ import HeroSection from "../component/HeroSection";
 
 export default function HomePage() {
   useEffect(() => {
-    const hash = window.location.hash;
+    const hash = globalThis.location.hash;
     if (hash) {
       const sectionElement = document.querySelector(hash);
       if (sectionElement) {
