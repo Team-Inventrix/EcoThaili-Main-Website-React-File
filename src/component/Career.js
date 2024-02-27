@@ -79,7 +79,7 @@ const StyledContainer = styled(Container)({
               <HasTags>Apply now</HasTags>
             </Body>
             <Grid container spacing={2} sx={{ mt: 3,px:"5vw" }}>
-              <Grid item xs={12} sm={6} md={12}>
+              <Grid item xs={12} sm={12} md={12}>
                 <Title component="h2" variant="h4">
                   Job Listings
                 </Title>

@@ -4,7 +4,8 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 
-import Logo from "../image/logo/ecoThaili-color-logo.webp";
+import BananaTree from "../image/hero-img.PNG";
+import { Box } from "@mui/material";
 
 const TextComponent = "Hello World";
 
@@ -30,11 +31,12 @@ const Title = styled(Typography)({
   fontWeight: 700,
   fontSize: "clamp(2rem, 4vw, 4rem)", // Use clamp() here
   margin: "0 0 5vw 0",
+  zIndex: "2",
 });
 
 const Body = styled(Typography)({
   color: "#EFEEEF",
-  textAlign: "justify",
+  textAlign: "left",
   fontSize: "clamp(1rem, 2vw, 1.5rem)", // And here
   lineHeight: "1.7",
   "@media (min-width:600px)": {
@@ -52,7 +54,7 @@ export default function OurStory() {
       <Grid container spacing={6}>
         <Grid item xs={12} md={12}>
           <Title component="h2" variant="h4">
-            The EcoThaili Story
+            Our Story
           </Title>
           <Body variant="body1" style={{ position: "relative" }}>
             Our mission is to protect our only planet, by creating eco-friendly

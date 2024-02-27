@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink} from "react-scroll";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,6 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import LogoImg from "../image/logo/ecoThaili-color-logo.webp";
+import Link from "@mui/material/Link";
 
 const logoStyle = {
   width: "110px",
@@ -25,9 +26,22 @@ export default function Header() {
     setOpen(newOpen);
   };
 
+  const homepageComponent = [
+    "hs",
+    "os",
+    "ps",
+    "mc",
+    "mp",
+    "oi",
+    "op",
+    "faq",
+    "a",
+  ];
+
   const scrollToSection = (sectionId) => {
     const sectionElement = document.getElementById(sectionId);
     const offset = 128;
+    
     if (sectionElement) {
       const targetScroll = sectionElement.offsetTop - offset;
       sectionElement.scrollIntoView({ behavior: "smooth" });
@@ -36,24 +50,20 @@ export default function Header() {
         behavior: "smooth",
       });
       setOpen(false);
-    } // Add this closing brace
-    if (globalThis.location.pathname === '/') {
-      if (sectionId === '') {
-        globalThis.location.href = '/';
-      } else if (sectionElement) {
-        const targetScroll = sectionElement.offsetTop - offset;
-        sectionElement.scrollIntoView({ behavior: "smooth" });
-        globalThis.scrollTo({
-          top: targetScroll,
-          behavior: "smooth",
-        });
-        setOpen(false);
+      return;
+    }
+  
+    if (globalThis.location.pathname === "/") {
+      if (sectionId === "") {
+        globalThis.location.href = "/";
+      } else {
+        globalThis.location.href = "/#" + sectionId;
       }
     } else {
-      if (sectionId === ' ') {
-        globalThis.location.href = '/';
+      if (!homepageComponent.includes(sectionId)) {
+        globalThis.location.href = `/${sectionId}`;
       } else {
-        globalThis.location.href = '/#' + sectionId;
+        globalThis.location.href = "/#" + sectionId;
       }
     }
   };
@@ -109,7 +119,7 @@ export default function Header() {
                 alignItems: "center",
               }}
             >
-              <Link
+              <ScrollLink
                 to="hs"
                 spy={true}
                 smooth={true}
@@ -123,11 +133,11 @@ export default function Header() {
                 }}
               >
                 <img src={LogoImg} style={logoStyle} alt="EcoThaili" />
-              </Link>
+              </ScrollLink>
               <Box
                 sx={{ display: { xs: "none", md: "flex", margin: "100px 0" } }}
               >
-                <Link
+                <ScrollLink
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -152,9 +162,9 @@ export default function Header() {
                   >
                     Our Story
                   </MenuItem>
-                </Link>
+                </ScrollLink>
 
-                <Link
+                <ScrollLink
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -179,9 +189,9 @@ export default function Header() {
                   >
                     Problem Statement
                   </MenuItem>
-                </Link>
+                </ScrollLink>
 
-                <Link
+                <ScrollLink
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -206,9 +216,9 @@ export default function Header() {
                   >
                     Material Composition
                   </MenuItem>
-                </Link>
+                </ScrollLink>
 
-                <Link
+                <ScrollLink
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -233,9 +243,9 @@ export default function Header() {
                   >
                     Manufacturing Process
                   </MenuItem>
-                </Link>
+                </ScrollLink>
 
-                <Link
+                <ScrollLink
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -260,9 +270,9 @@ export default function Header() {
                   >
                     Our Impact
                   </MenuItem>
-                </Link>
+                </ScrollLink>
 
-                <Link
+                <ScrollLink
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -287,9 +297,9 @@ export default function Header() {
                   >
                     Product
                   </MenuItem>
-                </Link>
+                </ScrollLink>
 
-                <Link
+                <ScrollLink
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -314,9 +324,9 @@ export default function Header() {
                   >
                     FAQ
                   </MenuItem>
-                </Link>
+                </ScrollLink>
 
-                <Link
+                <ScrollLink
                   spy={true}
                   smooth={true}
                   offset={0}
@@ -341,7 +351,7 @@ export default function Header() {
                   >
                     About
                   </MenuItem>
-                </Link>
+                </ScrollLink>
               </Box>
             </Box>
             <Box
@@ -362,98 +372,172 @@ export default function Header() {
                 <MenuIcon />
               </Button>
               <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-                  <Box
-                    sx={{
-                      minWidth: "60dvw",
+                <Box
+                  sx={{
+                    minWidth: "60dvw",
                     p: 3,
                     backgroundColor: "background.paper",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap:"3vw",
-                      alignItems: "end",
-                      flexGrow: 1,
-                      fontSize: "clamp(1rem, 3vw, 3rem)"
-                    }}
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "3vw",
+                    alignItems: "end",
+                    flexGrow: 1,
+                    fontSize: "clamp(1rem, 3vw, 3rem)",
+                  }}
+                >
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    onClick={() => scrollToSection("os")}
                   >
-                    <Link
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={500}
-                      activeClass="active"
-                      p="1rem"
-                      onClick={() => scrollToSection("os")}
-                    >
-                      Our Story
-                    </Link>
-                    <Link
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={500}
-                      activeClass="active"
-                      p="1rem"
-                      onClick={() => scrollToSection("os")}
-                    >
-                      problem Statement
-                    </Link>
-                    <Link
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={500}
-                      activeClass="active"
-                      p="1rem"
-                      onClick={() => scrollToSection("os")}
-                    >
-                      Material Composition
-                    </Link>
-                    <Link
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={500}
-                      activeClass="active"
-                      p="1rem"
-                      onClick={() => scrollToSection("os")}
-                    >
-                      Our Impact
-                    </Link>
-                    <Link
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={500}
-                      activeClass="active"
-                      p="1rem"
-                      onClick={() => scrollToSection("os")}
-                    >
-                      Product
-                    </Link>
-                    <Link
-                      spy={true}
-                      smooth={true}
-                      offset={50}
-                      duration={500}
-                      activeClass="active"
-                      p="1rem"
-                      onClick={() => scrollToSection("os")}
-                    >
-                      FAQ
-                    </Link>
-                    <Link
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={500}
-                      activeClass="active"
-                      p="1rem"
-                      onClick={() => scrollToSection("os")}
-                    >
-                      About
-                    </Link>
-                  </Box>
-                  <Divider />
+                    Our Story
+                  </ScrollLink>
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    onClick={() => scrollToSection("ps")}
+                  >
+                    problem Statement
+                  </ScrollLink>
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    onClick={() => scrollToSection("mc")}
+                  >
+                    Material Composition
+                  </ScrollLink>
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    onClick={() => scrollToSection("oi")}
+                  >
+                    Our Impact
+                  </ScrollLink>
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    onClick={() => scrollToSection("p")}
+                  >
+                    Product
+                  </ScrollLink>
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    onClick={() => scrollToSection("faq")}
+                  >
+                    FAQ
+                  </ScrollLink>
+                  <ScrollLink
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    onClick={() => scrollToSection("a")}
+                  >
+                    About
+                  </ScrollLink>
+                </Box>
+                <Divider />
+                <Box
+                  sx={{
+                    minWidth: "60dvw",
+                    p: 3,
+                    backgroundColor: "background.paper",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "3vw",
+                    alignItems: "end",
+                    flexGrow: 1,
+                    fontSize: "clamp(1rem, 3vw, 3rem)",
+                  }}
+                >
+                  <Link
+                    style={{
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    href="/career"
+                  >
+                    Careers
+                  </Link>
+                  <Link
+                    style={{
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    href="/contact"
+                  >
+                    Contact
+                  </Link>
+                  <Link
+                    style={{
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    href="/terms"
+                  >
+                    Terms & Services
+                  </Link>
+                  <Link
+                    style={{
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                    activeClass="active"
+                    p="1rem"
+                    href="/privacy"
+                  >
+                    Privacy Policy
+                  </Link>
+                </Box>
               </Drawer>
             </Box>
           </Toolbar>
