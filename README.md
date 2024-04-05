@@ -24,6 +24,13 @@ Make sure you have the following installed on your machine:
 - npm (Node Package Manager)
 - git (If you want to upload you changes through the terminal)
 
+> [!IMPORTANT]
+> PR must be from branch where you have pushed your changes, to the base branch of our repository ie, main branch.
+
+> [!NOTE]
+> Make sure to consult the project's documentation or README for any specific instructions or requirements.
+> If you encounter any issues during setup or while running the application, refer to the project's issue tracker or seek help from the project maintainers.
+
 ### Steps
 
 0. **Pre Cloning Steps** (For new to GitHub)
@@ -235,10 +242,3 @@ add your email address here which should be enclosed in quotes. <br><br>(Pro Tip
       If you got an error then search that error on what the error is saying and go discuss with other developer in [Discussion](https://github.com/orgs/Team-Inventrix/discussions/categories/q-a)
 
 ### Boom Ya 🚀, Its time to raise PR
-
-> [!IMPORTANT]
-> PR must be from branch where you have pushed your changes, to the base branch of our repository ie, main branch.
-
-> [!NOTE]
-> Make sure to consult the project's documentation or README for any specific instructions or requirements.
-> If you encounter any issues during setup or while running the application, refer to the project's issue tracker or seek help from the project maintainers.
